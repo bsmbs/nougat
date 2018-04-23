@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nougat</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="og:description" content="Discord Bot Nougat">
+<meta name="og:title" content="Nougat >> Oreo">
+<meta name="og:site_name" content="Nougat">
+ <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet"> 
+<link rel="shortcut icon" href="nougat-maly.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="super">
+            <div class="nougatek">
+                <img src="nougat-duzy.png"></div>
+        </div>
+        <div class="napis">Nougat</div>
+        <div class="przyciski">
+            <button class="btn dodaj" onclick="dodaj()">Dodaj na swój serwer</button>
+            <button class="btn git" onclick="git()">Github</button>
+        </div>
+        <div class="karty">
+            <div class="karta">
+                <span class="big">Ekonomia</span>
+                <span class="tekst">Nougat posiada skuteczny system wymiany między użytkownikami i to międzyserwerowy!<br />Możesz sprzedać dowolną wiadomość (może być to też link), a kupić będzie ją można na każdym serwerze, na którym jest Nougat! W dodatku dostaniesz pewien % od sprzedaży!</span>
+            </div>
+            <div class="karta">
+                <span class="big">Sadownictwo</span>
+                <span class="tekst">Dzięki Nougatowi możesz łatwo pozwać kogo tylko chcesz, o ile jest na twoim serwerze, i to bardzo szybko! Użytkownik pozwany otrzyma o tym informacje, a dalej to już można uzgadniać prywatnie.</span>
+            </div>
+            <div class="karta">
+                <span class="big">Otwarty</span>
+                <span class="tekst">Możesz sprawdzić kod, zahostować u siebie, ulepszyć go. Gwarancja, że bot jest czysty i bez exploitów.  Tam wyżej jest przycisk prowadzący do repo na githubie, śmiało zobacz</span>
+            </div>
+        </div>
+
+        <div class="karta" style="display: flex">
+            <span>&copy; Pizza 2018</span>
+            <span style="flex-grow: 1"></span>
+            <a href="https://github.com/pizza61">Github</a>
+            <a href="https://papryka.pro">papryka.pro</a>
+        </div>
+    </div>
+
+    <script>
+    const dodaj = function() {
+        window.open(
+            'https://discordapp.com/api/oauth2/authorize?client_id=429587398511427584&permissions=201346048&scope=bot', '_blank'
+        )
+    }
+
+    const git = function() {
+        window.open(
+            'https://github.com/pizza61/nougat', '_blank'
+        )
+    }
+    </script>
+</body>
+</html>
