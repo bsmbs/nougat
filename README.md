@@ -7,7 +7,8 @@
 ## Nougat
 Nougat to bot na Discorda. Posiada wiele fajnych funkcji, w tym ekonomie, Sadownictwo i wiele innych.
 
-[Link do bota hostowanego przeze mnie](https://discordapp.com/api/oauth2/authorize?client_id=429587398511427584&permissions=201346048&scope=bot)
+* [strona bota](https://pizza61.github.io/nougat)
+* [Link do bota hostowanego przeze mnie](https://discordapp.com/api/oauth2/authorize?client_id=429587398511427584&permissions=201346048&scope=bot)
 
 ## Konfiguracja
 Wymagania:
