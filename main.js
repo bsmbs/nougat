@@ -14,6 +14,7 @@ const kround = require('./modules/round');
 const sad = require('./modules/sadownictwo');
 const sprzedaj = require('./modules/sprzedaj');
 const punkty = require('./modules/punkty');
+const serwerm = require('./modules/serwer');
 
 // komendy bota
 const pilka = require('./commands/8pilka');
@@ -32,6 +33,10 @@ const ciastko = require('./commands/ciastko');
 const odwroc = require('./commands/odwroc');
 const sprzedajm = require('./commands/sprzedaj');
 const pozwij = require('./commands/pozwij');
+const git = require('./commands/git');
+const warn = require('./commands/warn');
+const staty = require('./commands/staty');
+const changelog = require('./commands/changelog');
 
 client.login(settings.token)
 .catch((err) => {
@@ -67,15 +72,21 @@ let produktSchema = mongoose.Schema({
     zaw: String, // zawartosc przedmiotu - moze to byc link, obrazek, tekst, ogolnie roznie.
     usid: String // id użytkownika wystawiającego
 });
+let serwerSchema = mongoose.Schema({
+    id: String,
+    nougatCount: Number,
+    msgCount: Number,
+})
 let Uzytnik = mongoose.model('Uzytnik', userSchema);
 
 produktSchema.plugin(mongooseAi.plugin, 'Prodkt');
 let Prodkt = mongoose.model('Prodkt', produktSchema);
+let Serwer = mongoose.model('Serwer', serwerSchema);
 // KONIEC MONGOŁ AREA
 
 client.on('ready', () => { // informacja o zalogowaniu
     console.log(`Nougat zalogowany jako ${client.user.tag}`);
-    client.user.setActivity('Na '+client.guilds.size+' serwerach!', {
+    client.user.setActivity('na '+client.guilds.size+' serwerach!', {
         type: 'LISTENING'
     })
     Uzytnik.findOneAndUpdate({
@@ -99,16 +110,35 @@ let sprzedajnazwa = [];
 let sprzedajcena = [];
 let sprzedajzaw = [];
 
+client.on('guildCreate', guild => {
+    Serwer.find({id: guild.id}, (err, serw) => {
+        if(!serw.length) {
+            let nowySerwer = new Serwer({
+                id: guild.id,
+                nougatCount: 0,
+                msgCount: 0,
+            });
+            nowySerwer.save();
+        }
+    })
+    client.user.setActivity('na '+client.guilds.size+' serwerach!', {
+        type: 'LISTENING'
+    })
+})
+
 client.on('message', message => {
     if (message.author.bot) return;
     if (message.guild) {
         punkty.run(message, Uzytnik)
+        serwerm.run(Serwer, message.guild, 0)
     }
     const args = message.content.slice(prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase(); // wycinanie komendy i argumentow
 
     if (message.content.startsWith(prefix)) {
+        if (message.guild) serwerm.run(Serwer, message.guild, 1);
         switch (command) {
+            // takie rozne
             case "pozwij":
                 // komenda pozwij inicjująca tryb pozywania
                 pozwij.run(message, pozwijmode, pozwijmodev);
@@ -116,6 +146,11 @@ client.on('message', message => {
             case "help":
                 // lista komend
                 help.run(message, Discord, prefix, settings.host);
+                break;
+            case "git":
+            case "github":
+            case "autor":
+                git.run(message, Discord)
                 break;
             case "8pilka":
                 pilka.run(args, message, Discord)
@@ -141,11 +176,15 @@ client.on('message', message => {
             case "mono":
                 mono.run(message, Discord);
                 break;
+            case "staty":
+                staty.run(message, Discord, Serwer, message.guild);
+                break;
+            case "changelog":
+                changelog.run(message, Discord);
+                break;
+            // ekonomia
             case "zaplac":
                 zaplac.run(args, message, Discord, Uzytnik);
-                break;
-            case "nazwa":
-                nazwa.run(args, message, Discord, client);
                 break;
             case "bal":
             case "money":
@@ -161,6 +200,13 @@ client.on('message', message => {
                 break;
             case "sprzedaj":
                 sprzedajm.run(message, Discord, sprzedajmode, sprzedajmodev);
+                break;
+            // administracyjne
+            case "nazwa":
+                nazwa.run(args, message, Discord, client);
+                break;
+            case "warn":
+                warn.run(args, message, Discord);
                 break;
         }
     }
