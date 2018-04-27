@@ -1,9 +1,9 @@
 exports.run = (args, message, Discord) => {
     let usernazwa = args.slice(0).join(" ");
     if(usernazwa == '') {
-        let uzytkownik = message.author;
+        var uzytkownik = message.author;
     } else {
-        let uzytkownik = message.mentions.members.first().user
+        var uzytkownik = message.mentions.members.first().user
     }
     let czas = new Date(uzytkownik.createdTimestamp);
     let status = 'Nieznany';
