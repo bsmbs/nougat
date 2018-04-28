@@ -1,6 +1,6 @@
 {
   "name": "nougat",
-  "version": "2.2.0",
+  "version": "2.4.0",
   "description": "bot na discorda",
   "main": "main.js",
   "scripts": {
@@ -16,6 +16,7 @@
   "license": "MIT",
   "dependencies": {
     "discord.js": "^11.3.2",
+    "jimp": "^0.2.28",
     "mongoose": "^5.0.12",
     "mongoose-auto-increment": "^5.0.1",
     "request": "^2.85.0",

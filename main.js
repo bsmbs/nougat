@@ -5,6 +5,7 @@ const req = require('request');
 const rp = require('request-promise');
 const mongoose = require('mongoose');
 const mongooseAi = require('mongoose-auto-increment');
+const Jimp = require('jimp');
 
 // ustawienia
 const settings = require('./settings.json');
@@ -37,6 +38,10 @@ const git = require('./commands/git');
 const warn = require('./commands/warn');
 const staty = require('./commands/staty');
 const changelog = require('./commands/changelog');
+const odwrocKolory = require('./commands/obrazki/odwrocKolory');
+const jasny = require('./commands/obrazki/jasny');
+const sepia = require('./commands/obrazki/sepia');
+const przekrec = require('./commands/obrazki/przekrec');
 
 client.login(settings.token)
 .catch((err) => {
@@ -207,6 +212,19 @@ client.on('message', message => {
                 break;
             case "warn":
                 warn.run(args, message, Discord);
+                break;
+            // obrazki
+            case "kolory":
+                odwrocKolory.run(message, Discord, Jimp);
+                break;
+            case "rozjasnij":
+                jasny.run(message, Discord, Jimp);
+                break;
+            case "sepia":
+                sepia.run(message, Discord, Jimp);
+                break;
+            case "przekrec":
+                przekrec.run(message, Discord, Jimp);
                 break;
         }
     }
