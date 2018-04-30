@@ -215,16 +215,16 @@ client.on('message', message => {
                 break;
             // obrazki
             case "kolory":
-                odwrocKolory.run(message, Discord, Jimp);
+                odwrocKolory.run(args, message, Discord, Jimp);
                 break;
             case "rozjasnij":
-                jasny.run(message, Discord, Jimp);
+                jasny.run(args, message, Discord, Jimp);
                 break;
             case "sepia":
-                sepia.run(message, Discord, Jimp);
+                sepia.run(args, message, Discord, Jimp);
                 break;
             case "przekrec":
-                przekrec.run(message, Discord, Jimp);
+                przekrec.run(args, message, Discord, Jimp);
                 break;
         }
     }
