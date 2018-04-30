@@ -201,7 +201,7 @@ client.on('message', message => {
                 biedronka.run(message, Discord, Prodkt, Uzytnik, prefix);
                 break;
             case "kup":
-                kup.run(args, message, Discord, Prodkt, Uzytnik);
+                kup.run(args, message, Discord, Prodkt, Uzytnik, kround);
                 break;
             case "sprzedaj":
                 sprzedajm.run(message, Discord, sprzedajmode, sprzedajmodev);

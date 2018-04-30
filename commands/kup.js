@@ -1,7 +1,4 @@
-exports.run = (args, message, Discord, Prodkt, Uzytnik) => {
-    const {
-        kround
-    } = require('../modules/round');
+exports.run = (args, message, Discord, Prodkt, Uzytnik, kround) => {
     let numerek = args[0];
     Prodkt.find({
         _id: numerek
