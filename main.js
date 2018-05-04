@@ -64,7 +64,7 @@ db.on('error', (err) => {
 let userSchema = mongoose.Schema({
     uid: String, // id discorda
     hajs: Number, // stan konta uzytkownika
-    zajety: Boolean, // czy dwie minutki minely?
+    zajety: Number, // czas w ktorym ostatni raz uzytkownik dostal hajs
     nick: String, // nick
     posiadane: {
         type: Array,

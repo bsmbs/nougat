@@ -2,7 +2,8 @@ exports.run = (message, Discord, Prodkt, sprzedajnazwa, sprzedajmode, sprzedajmo
 
     if (!message.guild) {
         if (sprzedajmode[message.author.id] == true) {
-            if (sprzedajmodev[message.author.id] == 1 && message.content && message.content.length < 25 && !message.content.includes('http') && !message.content.includes('discord') && !message.content.includes('*') && !message.content.includes('`') && !message.content.includes('~')) {
+            var ma = message.content.includes;
+            if (sprzedajmodev[message.author.id] == 1 && message.content && message.content.length < 25 && !message.content.includes('http') && !message.content.includes('discord') && !message.content.includes('*') && !message.content.includes('`') && !message.content.includes('~') && !message.content.includes('sex') && !message.content.includes('kutas') && !message.content.includes('kupa')) {
                 sprzedajnazwa[message.author.id] = message.content;
                 message.author.send('Dobra, teraz podaj cenę w bitcoinach. Maksymalna to 500.');
                 sprzedajmodev[message.author.id] = 2;
