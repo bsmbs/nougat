@@ -5,10 +5,12 @@
 ![GitHub tag](https://img.shields.io/github/tag/pizza61/nougat.svg?style=for-the-badge)
 
 ## Nougat
-Nougat to bot na Discorda. Posiada wiele fajnych funkcji, w tym ekonomie, Sadownictwo i wiele innych.
+Nougat to bot na Discorda. Posiada wiele fajnych funkcji, takich jak ekonomia, sadownictwo czy różne efekty obrazków
 
-* [strona bota](https://pizza61.github.io/nougat)
-* [Link do bota hostowanego przeze mnie](https://discordapp.com/api/oauth2/authorize?client_id=429587398511427584&permissions=201346048&scope=bot)
+**Ten branch jest do rozwijanej wersji 3.x, która nie ma gwarancji działania!**
+
+* [Strona bota](https://pizza61.github.io/nougat)
+* [Invite bota](https://discordapp.com/api/oauth2/authorize?client_id=429587398511427584&permissions=201346048&scope=bot) *Hostowana jest wersja 2.x, 3.x musisz postawić sam*
 
 ## Konfiguracja
 Wymagania:
