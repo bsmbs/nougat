@@ -23,7 +23,7 @@ exports.run = (args, message, Discord, Uzytnik) => {
                 if(tuzyt && kuzyt) {
                     if(tuzyt.length && kuzyt.length) {
                         if(tuzyt[0].hajs >= Number(ilosc)) {
-                            console.log(tuzyt[0].hajs - Number(ilosc));
+                            // console.log(tuzyt[0].hajs - Number(ilosc));
                             tuzyt[0].hajs = tuzyt[0].hajs - Number(ilosc);
                             kuzyt[0].hajs += Number(ilosc);
                             tuzyt[0].save();

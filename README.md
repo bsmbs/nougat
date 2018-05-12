@@ -21,3 +21,11 @@ Wymagania:
 - [ ] Po sklonowaniu repo należy wpisać komendę `npm install`, która zainstaluje wszystkie potrzebne zależności.
 - [ ] Następnie należy utworzyć plik `settings.json` i uzupełnić go jak w pliku [settings.json.example](https://github.com/pizza61/nougat/blob/master/settings.json.example)
 - [ ] Kiedy wszystko zostanie poprawnie uzupełnione, można wpisać `npm start` aby uruchomić bota.
+
+## TODO
+- [x] posegregowanie plików
+- [ ] język angielski
+- [ ] Zarządzanie członkami (banowanie, wyrzucanie)
+- [ ] Zarządzanie kanałem (czyszczenie wiadomości, wykrywanie zakazanych słów)
+- [ ] Autorole
+- [ ] Muzyka
