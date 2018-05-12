@@ -87,7 +87,7 @@ module.exports = class {
             this.dodajPunkty(message);
             if (message.content.startsWith(this.config.prefix)) {
                 if (message.guild) this.serwerm.run(this.Serwer, message.guild, 1);
-                this.handler(message, this.config, this.Discord, this.Prodkt, this.Uzytnik, this.kround, this.rp, this.Jimp, pozwij, sprzedaj, this.client);
+                this.handler(message, this.config, this.Discord, this.Prodkt, this.Uzytnik, this.kround, this.rp, this.Jimp, pozwij, sprzedaj, this.client, this.Serwer);
             } else {
                 this.check(message, this.Discord, pozwij, sprzedaj, this.Prodkt);
             }

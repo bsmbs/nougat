@@ -4,7 +4,8 @@
   "description": "bot na discorda",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "lint": "eslint ."
   },
   "keywords": [
     "bot",

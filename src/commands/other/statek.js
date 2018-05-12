@@ -4,7 +4,7 @@ exports.run = (message, client) => {
         message.channel.send('Prawidłowe użycie to: `*statek <pierwszy> <drugi>`');
         return;
     }
-    let pierwszy = message.channel.send(client.users.find('id', milosc[0]).toString() + ' \♥ ' + client.users.find('id', milosc[1]).toString());
+    message.channel.send(client.users.find('id', milosc[0]).toString() + ' \♥ ' + client.users.find('id', milosc[1]).toString());
     let lols = Math.floor((Math.random() * 10) + 1);
     message.channel.send("\♥ sprawdzam...");
     setTimeout(() => {

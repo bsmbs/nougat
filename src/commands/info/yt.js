@@ -45,12 +45,6 @@ exports.run = (args, message, Discord, rp, ytapi) => {
                             embed: blowRak
                         });
                     })
-                    .catch(function(err) {
-                        console.log(err);
-                    })
             })
-            .catch(function(err) {
-                console.log(err);
-            });
     }
 }

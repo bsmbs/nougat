@@ -7,6 +7,12 @@ exports.sprzedaj = sprzedaj.run;
 
 // commands: admin
 
+const ban = require("../commands/admin/ban");
+exports.ban = ban.run;
+
+const czysc = require("../commands/admin/czysc");
+exports.czysc = czysc.run;
+
 const nazwa = require('../commands/admin/nazwa');
 exports.nazwa = nazwa.run;
 
@@ -31,6 +37,9 @@ const zaplac = require('../commands/eco/zaplac');
 exports.zaplac = zaplac.run;
 
 // commands: info
+
+const check = require('../commands/info/check');
+exports.check = check.run;
 
 const git = require('../commands/info/git');
 exports.git = git.run;

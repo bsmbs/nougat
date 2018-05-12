@@ -1,16 +1,7 @@
-module.exports = (message, config, Discord, Prodkt, Uzytnik, kround, rp, Jimp, pozwij, sell, client) => {
+module.exports = (message, config, Discord, Prodkt, Uzytnik, kround, rp, Jimp, pozwij, sell, client, Serwer) => {
     const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase(); // wycinanie komendy i argumentow
     const n = require('./loader');
-    let pozwijmode = []
-    let pozwijmodev = []
-    let powod, pozwany; // deklaracja zmiennych do pozwywania
-
-    let sprzedajmode = [];
-    let sprzedajmodev = [];
-    let sprzedajnazwa = [];
-    let sprzedajcena = [];
-    let sprzedajzaw = [];
 
     switch(command) {
         // takie rozne
@@ -73,12 +64,21 @@ module.exports = (message, config, Discord, Prodkt, Uzytnik, kround, rp, Jimp, p
         case "sprzedaj":
             n.sprzedajm(message, Discord, sell.mode, sell.modev);
             break;
+        case "check":
+            n.check(message, Discord, client, 0);
+            break;
+        case "checkme":
+            n.check(message, Discord, client, 1);
+            break;
             // administracyjne
         case "nazwa":
-            n.nazwa(args, message, Discord, client);
+            n.nazwa(args, message, Discord, client, config);
             break;
         case "warn":
             n.warn(args, message, Discord);
+            break;
+        case "czysc":
+            n.czysc(args, message, Discord, client);
             break;
             // obrazki
         case "kolory":
