@@ -92,40 +92,6 @@ exports.sms = sms.run;
 
 const statek = require('../commands/other/statek');
 exports.statek = statek.run;
-/*
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-*/
+const wybierz = require('../commands/other/wybierz');
+exports.wybierz = wybierz.run;

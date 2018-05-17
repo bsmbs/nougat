@@ -45,6 +45,9 @@ module.exports = (message, config, Discord, Prodkt, Uzytnik, kround, rp, Jimp, p
         case "staty":
             n.staty(message, Discord, Serwer, message.guild);
             break;
+        case "wybierz":
+            n.wybierz(args, message, Discord, config);
+            break;
             // ekonomia
         case "zaplac":
             n.zaplac(args, message, Discord, Uzytnik);
