@@ -1,10 +1,11 @@
 {
   "name": "nougat",
-  "version": "2.4.0",
+  "version": "3.0.0",
   "description": "bot na discorda",
-  "main": "main.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node main.js"
+    "start": "node index.js",
+    "lint": "eslint ."
   },
   "keywords": [
     "bot",

@@ -1,8 +1,6 @@
-exports.run = (args, message, Discord, client) => {
+exports.run = (args, message, Discord, client, config) => {
     let nowanazwa = args.slice(0).join(" ");
-    if(message.guild.members.get(message.author.id).hasPermission("MANAGE_NICKNAMES") || message.author.id == cidautora) {
-
-
+    if(message.guild.members.get(message.author.id).hasPermission("MANAGE_NICKNAMES") || message.author.id == config.id) {
         if(message.guild.members.get(client.user.id).hasPermission("CHANGE_NICKNAME")) {
             message.guild.members.get(client.user.id).setNickname(nowanazwa);
             const successEmbed = new Discord.RichEmbed()
@@ -12,6 +10,7 @@ exports.run = (args, message, Discord, client) => {
             message.channel.send({
                 embed: successEmbed
             });
+            
         } else {
             const errEmbed = new Discord.RichEmbed()
                 .setAuthor('Nougat', 'https://cdn.discordapp.com/avatars/429587398511427584/d829eb3c8594727981b8c80699285479.png?size=128')

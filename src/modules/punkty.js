@@ -6,7 +6,6 @@ exports.run = (message, Uzytnik) => {
         if(uzyt.length) {
             // przyznaj HAJS ZA PISANKO
             if(uzyt[0].zajety+60 < (new Date()).getTime()/1000) { // jeżeli od ostatniej wiadomosci minelo 60 sekund
-                console.log((new Date()).getTime()/1000)
                 // uzyt[0].zajety = true;
                 var is = Math.floor((Math.random() * 10) + 0);
                 uzyt[0].hajs += is;
@@ -16,8 +15,6 @@ exports.run = (message, Uzytnik) => {
                 uzyt[0].zajety = (new Date()).getTime()/1000;
                 uzyt[0].save();
             } else { // jezeli od ostatniej wiadomosci nie minelo 60 sekund
-                console.log(uzyt[0].zajety)
-                console.log((new Date()).getTime()/1000)
             }
         } else {
             let nowyUzytnik = new Uzytnik({
