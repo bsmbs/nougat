@@ -1,22 +1,26 @@
 body {
     margin: 0;
     font-family: 'PT Sans', sans-serif;
-} 
-.super {
-    background: #222222;
-    height: 500px;
+    background: #2b2f33;
+    color: white;
 }
+
+.super {
+    height: 450px;
+}
+
 .nougatek {
     width: 300px;
     height: 300px;
     top: 100px;
     margin: auto;
-	border-radius: 150px;
-	-webkit-border-radius: 150px;
+    border-radius: 150px;
+    -webkit-border-radius: 150px;
     -moz-border-radius: 150px;
     background-color: white;
     position: relative;
 }
+
 .nougatek img {
     width: 250px;
     position: absolute;
@@ -27,82 +31,81 @@ body {
     margin-left: auto;
     margin-right: auto;
     height: auto;
-} .napis {
+}
+
+.napis {
     font-weight: 700;
     text-align: center;
     margin: 20px;
     font-size: 170%;
 }
+
 .btn {
     position: relative;
-
-    padding: 15px;
+    padding: 30px;
+    width: 200px;
+    
     outline: none;
-
     overflow: hidden;
-  
     border-width: 0;
     font-size: 80%;
     font-weight: bolder;
     outline: none;
-    border-radius: 2px;
+    border-radius: 4px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
-    
     color: #ecf0f1;
-    
     transition: background-color .3s;
-  }
-  
-  .btn > * {
+}
+
+.btn>* {
     position: relative;
-  }
-  
-  .btn span {
+}
+
+.btn span {
     display: block;
     padding: 12px 24px;
-  }
-  
-  .btn:before {
+}
+
+.btn:before {
     content: "";
     font-family: inherit;
     position: absolute;
     top: 50%;
     left: 50%;
-
     display: block;
     width: 0;
     padding-top: 0;
-      
     border-radius: 100%;
-    
     background-color: rgba(236, 240, 241, .3);
-    
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-  }
-  
-  .btn:active:before {
+}
+
+.btn:active:before {
     width: 120%;
     padding-top: 120%;
-    
     transition: width .4s ease-out, padding-top .4s ease-out;
-  }
+}
 
 .dodaj {
     background-color: #7289DA;
 }
+
 .dodaj:hover {
-    background-color: #99AAB5;
+    background-color: #566b7c;
 }
+
 .git {
     background-color: #24292e;
 }
+
 .git:hover {
     background-color: #121416;
 }
+
 .przyciski {
     width: 50%;
     text-align: center;
@@ -113,9 +116,13 @@ body {
 .karty {
     margin-top: 10px;
 }
+
 @media screen and (min-width: 768px) {
-    .karty { display: flex; }
+    .karty {
+        display: flex;
+    }
 }
+
 .karta {
     margin: 15px;
     background-color: #222222;
@@ -127,19 +134,30 @@ body {
     position: relative;
     bottom: 0;
 }
+
 .big {
     font-size: 180%;
     margin-bottom: 10px;
     display: block;
 }
+
 .karta:hover {
     bottom: 5px;
 }
+
 a {
     text-decoration: none;
     color: inherit;
     margin-left: 15px;
 }
+
 a:hover {
     color: #7289DA;
+}
+
+nav {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+    background: #008b49;
+    padding: 20px;
 }
