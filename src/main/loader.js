@@ -19,6 +19,9 @@ exports.nazwa = nazwa.run;
 const warn = require('../commands/admin/warn');
 exports.warn = warn.run;
 
+const zakazane = require('../commands/admin/zakazane');
+exports.zakazane = zakazane.run;
+
 // commands: economy
 
 const biedronka = require('../commands/eco/biedronka');

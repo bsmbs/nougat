@@ -15,6 +15,7 @@ module.exports = class {
         this.punkty = require('../modules/punkty');
         this.serwerm = require('../modules/serwer');
         this.kround = require('../modules/round');
+        this.zakazane = require('../modules/zakazane');
     }
 
     initMongo() {
@@ -54,6 +55,10 @@ module.exports = class {
             id: String,
             nougatCount: Number,
             msgCount: Number,
+            zakazane: {
+                type: Array,
+                default: []
+            }
         })
         this.Uzytnik = this.mongoose.model('Uzytnik', this.userSchema);
 
@@ -90,6 +95,7 @@ module.exports = class {
                 this.handler(message, this.config, this.Discord, this.Prodkt, this.Uzytnik, this.kround, this.rp, this.Jimp, pozwij, sprzedaj, this.client, this.Serwer);
             } else {
                 this.check(message, this.Discord, pozwij, sprzedaj, this.Prodkt);
+                this.zakazane(message, this.Discord, this.Serwer)
             }
         })
     }

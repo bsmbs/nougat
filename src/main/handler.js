@@ -83,6 +83,9 @@ module.exports = (message, config, Discord, Prodkt, Uzytnik, kround, rp, Jimp, p
         case "czysc":
             n.czysc(args, message, Discord, client);
             break;
+        case "zakazane":
+            n.zakazane(args, message, Discord, Serwer);
+            break;
             // obrazki
         case "kolory":
             n.odwrocKolory(args, message, Discord, Jimp);

@@ -26,6 +26,6 @@ Wymagania:
 - [x] posegregowanie plików
 - [ ] język angielski
 - [ ] Zarządzanie członkami (banowanie, wyrzucanie)
-- [ ] Zarządzanie kanałem (czyszczenie wiadomości, wykrywanie zakazanych słów)
+- [x] Zarządzanie kanałem (czyszczenie wiadomości, wykrywanie zakazanych słów)
 - [ ] Autorole
 - [ ] Muzyka
