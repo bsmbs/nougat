@@ -4,7 +4,8 @@
   "description": "bot na discorda",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "build": "gulp",
+    "start": "node dist/main.js",
     "lint": "eslint ."
   },
   "keywords": [
@@ -22,5 +23,11 @@
     "mongoose-auto-increment": "^5.0.1",
     "request": "^2.85.0",
     "request-promise": "^4.2.2"
+  },
+  "devDependencies": {
+    "@types/mongoose": "^5.0.15",
+    "gulp": "^4.0.0",
+    "gulp-typescript": "^4.0.2",
+    "typescript": "^2.8.3"
   }
 }
