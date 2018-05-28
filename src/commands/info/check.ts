@@ -4,7 +4,7 @@ export default function check(message, client, mode)  {
     if (mode == 0) var klient = message.guild.members.get(client.user.id);
     if (mode == 1) var klient = message.guild.members.get(message.author.id);
     let embeded = new RichEmbed()
-    .setAuthor('Nougat', 'https://cdn.discordapp.com/avatars/429587398511427584/d829eb3c8594727981b8c80699285479.png?size=128')
+    .setAuthor('Nougat', 'https://cdn.discordapp.com/avatars/429587398511427584/d72e2f45262f7f7bdf956df2270752e3.jpg?size=1024')
     .setColor(0x123456);
 
     if (mode == 0) embeded.setTitle("Sprawdzanie uprawnień bota");

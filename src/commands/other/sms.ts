@@ -4,7 +4,7 @@ export default function sms(args, message) {
     let wiadomosc = args.slice(1).join(" ");
     if(typeof numer == 'undefined' || typeof wiadomosc == 'undefined') {
         const errEmbed = new RichEmbed()
-            .setAuthor('Nougat', 'https://cdn.discordapp.com/avatars/429587398511427584/d829eb3c8594727981b8c80699285479.png?size=128')
+            .setAuthor('Nougat', 'https://cdn.discordapp.com/avatars/429587398511427584/d72e2f45262f7f7bdf956df2270752e3.jpg?size=1024')
             .setColor((Math.random() * 0xFFFFFF << 0).toString(16))
             .setTitle('Poprawne użycie to: `*sms <ping komu> <wiadomosc dluga jak tylko zapragniesz>');
         message.channel.send({

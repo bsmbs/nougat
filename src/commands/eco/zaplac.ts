@@ -6,7 +6,7 @@ export default function zaplac(args, message) {
     let ilosc = args.slice(1).join(" ");
     if(typeof komu == 'undefined' || typeof ilosc == 'undefined' || komu.id == message.author.id) {
         const errEmbed = new RichEmbed()
-            .setAuthor('Nougat', 'https://cdn.discordapp.com/avatars/429587398511427584/d829eb3c8594727981b8c80699285479.png?size=128')
+            .setAuthor('Nougat', 'https://cdn.discordapp.com/avatars/429587398511427584/d72e2f45262f7f7bdf956df2270752e3.jpg?size=1024')
             .setColor((Math.random() * 0xFFFFFF << 0).toString(16))
             .setTitle('Poprawne użycie to: `*zaplac <ping komu> <kwota w bitcoinach>');
         message.channel.send({
@@ -32,7 +32,7 @@ export default function zaplac(args, message) {
                             tuzyt[0].save();
                             kuzyt[0].save();
                             const wychodzacyEmbed = new RichEmbed()
-                                .setAuthor('Nougat Pay \™', 'https://cdn.discordapp.com/avatars/429587398511427584/d829eb3c8594727981b8c80699285479.png?size=128')
+                                .setAuthor('Nougat Pay \™', 'https://cdn.discordapp.com/avatars/429587398511427584/d72e2f45262f7f7bdf956df2270752e3.jpg?size=1024')
                                 .setColor((Math.random() * 0xFFFFFF << 0).toString(16))
                                 .setTitle('Gratulacje użytkowniku')
                                 .addField('Wysłałeś', komu, true)
@@ -42,7 +42,7 @@ export default function zaplac(args, message) {
                             });
 
                             const przychodzacyEmbed = new RichEmbed()
-                                .setAuthor('Nougat Pay \™', 'https://cdn.discordapp.com/avatars/429587398511427584/d829eb3c8594727981b8c80699285479.png?size=128')
+                                .setAuthor('Nougat Pay \™', 'https://cdn.discordapp.com/avatars/429587398511427584/d72e2f45262f7f7bdf956df2270752e3.jpg?size=1024')
                                 .setColor((Math.random() * 0xFFFFFF << 0).toString(16))
                                 .setTitle('Gratulacje użytkowniku')
                                 .addField('Dostałeś od', message.author, true)
