@@ -1,4 +1,4 @@
-<p align="center"><img src="https://raw.githubusercontent.com/pizza61/nougat/master/nougat-maly.png" /></p>
+<p align="center"><img width=200px src="https://raw.githubusercontent.com/pizza61/nougat/master/nougat-maly.png" /></p>
 
 ![GitHub top language](https://img.shields.io/github/languages/top/pizza61/nougat.png?style=for-the-badge)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/pizza61/nougat.svg?style=for-the-badge)
