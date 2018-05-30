@@ -9,6 +9,11 @@ export default function autorole(args, message: Message, client: Client) {
                 if(err) return;
                 dok[0].autorola = undefined;
                 dok[0].save();
+                const ctsEmbed = new RichEmbed()
+                        .setAuthor('Nougat - Autorole', 'https://cdn.discordapp.com/avatars/429587398511427584/a8d77ae510e68cc595c1ccda04a755fa.jpg?size=1024')
+                        .setColor((Math.random() * 0xFFFFFF << 0).toString(16))
+                        .setTitle('Wyłączono autorole');
+                    message.channel.send({ embed: ctsEmbed })
             })
         } else if(ranga.length > 0) {
             if(message.guild.members.get(client.user.id).hasPermission("MANAGE_ROLES")) {
