@@ -35,7 +35,7 @@ export default function yt(args, message) {
                 rp(siemason)
                     .then(function(kanalik) {
                         const blowRak = new RichEmbed()
-                            .setAuthor('Nougat - youtube info', 'https://cdn.discordapp.com/avatars/429587398511427584/d72e2f45262f7f7bdf956df2270752e3.jpg?size=1024', 'https://papryka.pro/yt')
+                            .setAuthor('Nougat - youtube info', 'https://cdn.discordapp.com/avatars/429587398511427584/a8d77ae510e68cc595c1ccda04a755fa.jpg?size=1024', 'https://papryka.pro/yt')
                             .setColor((Math.random() * 0xFFFFFF << 0).toString(16))
                             .setThumbnail(kanalik.items[0].snippet.thumbnails.default.url)
                             .setTitle(kanalik.items[0].snippet.title)

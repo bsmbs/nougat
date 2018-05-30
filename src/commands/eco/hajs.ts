@@ -35,7 +35,7 @@ export default function hajs(args, message) {
                 }, function(err, uzyt) {
                     if(uzyt.length) {
                         const pktEmbed = new RichEmbed()
-                            .setAuthor('Nougat - ekonomia', 'https://cdn.discordapp.com/avatars/429587398511427584/d72e2f45262f7f7bdf956df2270752e3.jpg?size=1024')
+                            .setAuthor('Nougat - ekonomia', 'https://cdn.discordapp.com/avatars/429587398511427584/a8d77ae510e68cc595c1ccda04a755fa.jpg?size=1024')
                             .setColor((Math.random() * 0xFFFFFF << 0).toString(16))
                             .setTitle('Stan konta użytkownika ' + message.mentions.members.first().displayName)
                             .setDescription(uzyt[0].hajs + ' BTC')
@@ -54,7 +54,7 @@ export default function hajs(args, message) {
             }, function(err, uzyt) {
                 if(uzyt.length) {
                     const pktEmbed = new RichEmbed()
-                        .setAuthor('Nougat - ekonomia', 'https://cdn.discordapp.com/avatars/429587398511427584/d72e2f45262f7f7bdf956df2270752e3.jpg?size=1024')
+                        .setAuthor('Nougat - ekonomia', 'https://cdn.discordapp.com/avatars/429587398511427584/a8d77ae510e68cc595c1ccda04a755fa.jpg?size=1024')
                         .setColor((Math.random() * 0xFFFFFF << 0).toString(16))
                         .setTitle('Stan konta użytkownika ' + message.author.username)
                         .setDescription(uzyt[0].hajs + ' BTC')

@@ -1,10 +1,10 @@
-import { RichEmbed } from 'discord.js';
+import { RichEmbed, Client, Message } from 'discord.js';
 
-export default function check(message, client, mode)  {
+export default function check(message: Message, client: Client, mode)  {
     if (mode == 0) var klient = message.guild.members.get(client.user.id);
     if (mode == 1) var klient = message.guild.members.get(message.author.id);
     let embeded = new RichEmbed()
-    .setAuthor('Nougat', 'https://cdn.discordapp.com/avatars/429587398511427584/d72e2f45262f7f7bdf956df2270752e3.jpg?size=1024')
+    .setAuthor('Nougat', 'https://cdn.discordapp.com/avatars/429587398511427584/a8d77ae510e68cc595c1ccda04a755fa.jpg?size=1024')
     .setColor(0x123456);
 
     if (mode == 0) embeded.setTitle("Sprawdzanie uprawnień bota");
@@ -19,6 +19,11 @@ export default function check(message, client, mode)  {
         embeded.addField("Zarządzanie wiadomościami", nieok, true);
     }
 
+    if(klient.hasPermission("MANAGE_ROLES")) {
+        embeded.addField("Zarządzanie rolami", ok, true);
+    } else {
+        embeded.addField("Zarządzanie rolami", nieok, true);
+    }
     if(klient.hasPermission("CHANGE_NICKNAME")) {
         embeded.addField("Zmiana nicku", ok, true);
     } else {

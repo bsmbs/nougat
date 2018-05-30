@@ -18,7 +18,7 @@ export default function zakazane(args, message) {
                             guds[0].save();
                             message.channel.send({
                                 embed: new RichEmbed()
-                                    .setAuthor("Nougat", 'https://cdn.discordapp.com/avatars/429587398511427584/d72e2f45262f7f7bdf956df2270752e3.jpg?size=1024')
+                                    .setAuthor("Nougat", 'https://cdn.discordapp.com/avatars/429587398511427584/a8d77ae510e68cc595c1ccda04a755fa.jpg?size=1024')
                                     .setColor((Math.random() * 0xFFFFFF << 0).toString(16))
                                     .setTitle("Dodano pomyślnie")
                             });
@@ -45,7 +45,7 @@ export default function zakazane(args, message) {
                                         guds[0].save();
                                         message.channel.send({
                                             embed: new RichEmbed()
-                                                .setAuthor("Nougat", 'https://cdn.discordapp.com/avatars/429587398511427584/d72e2f45262f7f7bdf956df2270752e3.jpg?size=1024')
+                                                .setAuthor("Nougat", 'https://cdn.discordapp.com/avatars/429587398511427584/a8d77ae510e68cc595c1ccda04a755fa.jpg?size=1024')
                                                 .setColor((Math.random() * 0xFFFFFF << 0).toString(16))
                                                 .setTitle("Usunięto pomyślnie")
                                         });
@@ -53,7 +53,7 @@ export default function zakazane(args, message) {
                                 } else {
                                     message.channel.send({
                                         embed: new RichEmbed()
-                                            .setAuthor("Nougat", 'https://cdn.discordapp.com/avatars/429587398511427584/d72e2f45262f7f7bdf956df2270752e3.jpg?size=1024')
+                                            .setAuthor("Nougat", 'https://cdn.discordapp.com/avatars/429587398511427584/a8d77ae510e68cc595c1ccda04a755fa.jpg?size=1024')
                                             .setColor((Math.random() * 0xFFFFFF << 0).toString(16))
                                             .setTitle("Nie znaleziono!")
                                     })
@@ -76,7 +76,7 @@ export default function zakazane(args, message) {
                     if(guds.length) {
                         let listaSlow = "\n";
                         const listaEmbed = new RichEmbed()
-                            .setAuthor("Nougat", 'https://cdn.discordapp.com/avatars/429587398511427584/d72e2f45262f7f7bdf956df2270752e3.jpg?size=1024')
+                            .setAuthor("Nougat", 'https://cdn.discordapp.com/avatars/429587398511427584/a8d77ae510e68cc595c1ccda04a755fa.jpg?size=1024')
                             .setColor((Math.random() * 0xFFFFFF << 0).toString(16))
                             .setTitle("Lista zakazanych słów na serwerze " + message.guild.name)
                         guds[0].zakazane.forEach((ss) => {
@@ -90,7 +90,7 @@ export default function zakazane(args, message) {
                 break;
             default:
                 const helpEmbed = new RichEmbed()
-                    .setAuthor("Nougat", 'https://cdn.discordapp.com/avatars/429587398511427584/d72e2f45262f7f7bdf956df2270752e3.jpg?size=1024')
+                    .setAuthor("Nougat", 'https://cdn.discordapp.com/avatars/429587398511427584/a8d77ae510e68cc595c1ccda04a755fa.jpg?size=1024')
                     .setColor((Math.random() * 0xFFFFFF << 0).toString(16))
                     .setTitle("Użycie komendy zakazane")
                     .setDescription(`Przeznaczona tylko dla osób z uprawnieniem \`Administrator\`
