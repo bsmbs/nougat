@@ -7,6 +7,7 @@ import { punkty } from '../modules/punkty';
 import { ready } from './ready';
 import { check } from './check';
 import { zakazane } from '../modules/zakazane';
+import { onJoin } from '../modules/autoroleService';
 
 export class Nougat {
     config: any;
@@ -67,13 +68,17 @@ export class Nougat {
             zakazane: {
                 type: Array,
                 default: []
-            }
+            },
+            config: {
+                "zakazane": Boolean,
+                "lang": String
+            },
+            autorola: String
         })
 
         Nougat.Uzytnik = Mongo.model('Uzytnik', this.userSchema);
         Nougat.Prodkt =  Mongo.model('Prodkt', this.produktSchema);
         Nougat.Serwer =  Mongo.model('Serwer', this.serwerSchema);
-        
         this.produktSchema.plugin(ai.plugin, 'Prodkt');
     }
 
@@ -95,6 +100,7 @@ export class Nougat {
         }
 
         this.client.on('ready', () => ready(this.client));
+        this.client.on('guildMemberAdd', member => onJoin(member))
         this.client.on("message", message => {
             if(message.author.bot) return;
             this.dodajPunkty(message);

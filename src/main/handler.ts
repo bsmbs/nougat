@@ -9,6 +9,9 @@ export function handluj(message: Message, pozwij, sell, client) {
 
     switch(command) {
         // admin
+        case "autorole":
+            n.autorole(args, message, client);
+            break;
         case "ban":
             //n.ban(args, message, client);
             break;

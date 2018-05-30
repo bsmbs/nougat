@@ -3,6 +3,7 @@ export { default as sad } from '../modules/sadownictwo';
 export { default as sprzedaj } from '../modules/sprzedaj';
 
 // admin
+export { default as autorole } from '../commands/admin/autorole';
 export { default as ban } from '../commands/admin/ban';
 export { default as czysc } from '../commands/admin/czysc';
 export { default as nazwa } from '../commands/admin/nazwa';

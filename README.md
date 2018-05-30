@@ -28,5 +28,5 @@ Wymagania:
 - [ ] język angielski
 - [ ] Zarządzanie członkami (banowanie, wyrzucanie)
 - [x] Zarządzanie kanałem (czyszczenie wiadomości, wykrywanie zakazanych słów)
-- [ ] Autorole
+- [x] Autorole
 - [ ] Muzyka
