@@ -29,4 +29,3 @@ Wymagania:
 - [ ] Zarządzanie członkami (banowanie, wyrzucanie)
 - [x] Zarządzanie kanałem (czyszczenie wiadomości, wykrywanie zakazanych słów)
 - [x] Autorole
-- [ ] Muzyka
