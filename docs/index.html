@@ -9,74 +9,34 @@
     <meta name="og:title" content="Nougat">
     <meta name="og:site_name" content="Najskuteczniejszy bot open source 100%">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
-    <link rel="shortcut icon" href="nougat-maly.png">
+    <link rel="shortcut icon" href="https://cdn.discordapp.com/avatars/429587398511427584/a8d77ae510e68cc595c1ccda04a755fa.png?size=2048">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="container">
         <div class="super">
-            <div class="nougatek">
-                <img src="nougat-duzy.png"></div>
+            <img src="https://cdn.discordapp.com/avatars/429587398511427584/a8d77ae510e68cc595c1ccda04a755fa.png?size=2048">
         </div>
         <div class="napis">Nougat</div>
         <div class="maly">Najskuteczniejszy bot kiedykolwiek stworzony</div>
         <div class="przyciski">
             <div class="add">
-                    <span class="dd">Dodaj na</span>
-                    <button class="btn dodaj" onclick="dodaj()">Discorda</button>
-                    <button class="btn tg" onclick="tg()">Telegrama</button>
+                <span class="dd">Dodaj na</span>
+                <button class="btn dodaj" onclick="dodaj()">Discorda</button>
+                <button class="btn tg" onclick="tg()">Telegrama</button>
             </div>
-            
             <button class="btn git" onclick="git()">Github</button>
         </div>
-        <!--<div class="napis">Nougat</div>
-        <div class="przyciski">
-            <button class="btn dodaj" onclick="dodaj()">Dodaj na swój serwer</button>
-            <button class="btn git" onclick="git()">Github</button>
-        </div>
-        <!--<div class="karty">
-            <div class="karta">
-                <span class="big">Ekonomia</span>
-                <span class="tekst">Nougat posiada skuteczny system wymiany między użytkownikami i to międzyserwerowy!<br />Możesz sprzedać dowolną wiadomość (może być to też link), a kupić będzie ją można na każdym serwerze, na którym jest Nougat! W dodatku dostaniesz pewien % od sprzedaży!</span>
-            </div>
-            <div class="karta">
-                <span class="big">Sadownictwo</span>
-                <span class="tekst">Dzięki Nougatowi możesz łatwo pozwać kogo tylko chcesz, o ile jest na twoim serwerze, i to bardzo szybko! Użytkownik pozwany otrzyma o tym informacje, a dalej to już można uzgadniać prywatnie.</span>
-            </div>
-            <div class="karta">
-                <span class="big">Otwarty</span>
-                <span class="tekst">Możesz sprawdzić kod, zahostować u siebie, ulepszyć go. Gwarancja, że bot jest czysty i bez exploitów.  Tam wyżej jest przycisk prowadzący do repo na githubie, śmiało zobacz</span>
-            </div>
-        </div>
-
-        <div class="karta" style="display: flex">
-            <span>&copy; Pizza 2018</span>
-            <span style="flex-grow: 1"></span>
-            <a href="https://github.com/pizza61">Github</a>
-            <a href="https://papryka.pro">papryka.pro</a>
-        </div>-->
+    </div>
+    <div class="komendy">
+        <h3>Komendy</h3>
+        <div class="bramki"></div>
     </div>
 
-    <script>
-        const dodaj = function() {
-            window.open(
-                'https://discordapp.com/api/oauth2/authorize?client_id=429587398511427584&permissions=469822598&scope=bot', '_blank'
-            )
-        }
-
-        const git = function() {
-            window.open(
-                'https://github.com/pizza61/nougat', '_blank'
-            )
-        }
-
-        const tg = function() {
-            window.open(
-                'https://t.me/nougat_tgbot', '_blank'
-            )
-        }
-    </script>
+    <script src="box.js"></script>
+    <script src="komendy.js"></script>
+    <script src="main.js"></script> 
 </body>
 
 </html>
