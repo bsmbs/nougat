@@ -122,7 +122,9 @@ body {
     padding: 20px;
     background-color: #24292e;
 }
-
+.tg {
+    background: #3a3f49;
+}
 .git:hover {
     background-color: #121416;
 }
