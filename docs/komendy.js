@@ -2,9 +2,17 @@ let komendy = [
     {
         nazwa: "Administracja",
             komendy: [{
+                cmd: "autorole",
+                args: "<nazwa roli|usun>",
+                opis: "Ustawia rolę automatyczną lub wyłącza"
+            },{
                 cmd: "czysc",
                 args: "<liczba wiadomości>",
                 opis: "Usuwa z kanału wskazaną liczbe wiadomości"
+            },{
+                cmd: "jail",
+                args: "<nazwa roli|mention>",
+                opis: "Wrzuca oznaczonego użytkownika do aresztu lub ustawia rolę, która ma być ustawiona" 
             },{
                 cmd: "nazwa",
                 args: "<nazwa>",

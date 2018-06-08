@@ -24,8 +24,16 @@ Wymagania:
 - [ ] Kiedy wszystko zostanie poprawnie uzupełnione, można wpisać `npm start` aby uruchomić bota.
 
 ## TODO
+
+### Do wersji 3.0
 - [x] posegregowanie plików
-- [ ] język angielski
-- [ ] Zarządzanie członkami (banowanie, wyrzucanie)
+- [x] jail
+- [ ] moderacja biedronki
 - [x] Zarządzanie kanałem (czyszczenie wiadomości, wykrywanie zakazanych słów)
 - [x] Autorole
+
+### Do kolejnych
+- [ ] język angielski
+- [ ] śmieszne mem obrazki
+- [ ] zaawansowane levele
+- [ ] Zarządzanie członkami (banowanie, wyrzucanie) // czemu po prostu nie robić tego przez discorda?

@@ -11,6 +11,7 @@ export function serwerm(guild, typ) {
                 id: guild.id,
                 nougatCount: 0,
                 msgCount: 0,
+                lang: "pl"
             });
             nowySerwer.save();
         }

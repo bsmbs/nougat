@@ -28,7 +28,6 @@ export class Nougat {
         this.client = new Discord.Client();
         this.initMongo();
     }
-
     initMongo() {
         Mongo.connect('mongodb://'+this.config.mongo)
         this.db = Mongo.connection;
@@ -69,10 +68,12 @@ export class Nougat {
                 type: Array,
                 default: []
             },
-            config: {
-                "zakazane": Boolean,
-                "lang": String
-            },
+            lang: String,
+            jail: [{
+                id: String,
+                roles: [String]
+            }],
+            jailRola: String,
             autorola: String
         })
 
@@ -84,7 +85,6 @@ export class Nougat {
 
     start() {
         this.client.login(this.config.token);
-
         let pozwij = {
             mode: [],
             modev: [],
@@ -105,8 +105,18 @@ export class Nougat {
             if(message.author.bot) return;
             this.dodajPunkty(message);
             if(message.content.startsWith(this.config.prefix)) {
-                if (message.guild) serwerm(message.guild, 1);
-                handluj(message, pozwij, sprzedaj, this.client);
+                if (message.guild) {
+                    serwerm(message.guild, 1);
+                    /*Nougat.Serwer.find({id: message.guild.id}, (err, dcs) => {
+                        if (err) return;
+                        if(dcs[0].lang == 'en') {
+                            handluj(message, pozwij, sprzedaj, this.client, en);
+                        } else {
+                            handluj(message, pozwij, sprzedaj, this.client, pl);
+                        }
+                    })*/
+                }
+                 handluj(message, pozwij, sprzedaj, this.client);
             } else {
                 check(message, pozwij, sprzedaj);
                 if (message.guild) zakazane(message);

@@ -15,7 +15,9 @@ export default function jasny(args, message) {
                 {apply: 'lighten', params: [ 30 ]}
             ]).getBuffer(Jimp.AUTO, function(err, buf) {
                 if (err) return;
-                message.channel.send({files: [buf]})
+                message.channel.send({files: [buf]}).catch((e) => {
+                    message.channel.send("Nie udało się wysłać obrazka, prawdopodobnie bot nie ma do tego uprawnień.")
+                })
             })
         })
 }

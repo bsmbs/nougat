@@ -18,9 +18,15 @@ export function handluj(message: Message, pozwij, sell, client) {
         case "czysc":
             n.czysc(args, message, client);
             break;
+        case "jail":
+            n.jail(client, args, message);
+            break;
         case "nazwa":
             n.nazwa(args, message, client);
             break;
+        /*case "lang":
+            n.lang(args, message);
+            break;*/
         case "warn":
             n.warn(args, message);
             break;
@@ -71,6 +77,7 @@ export function handluj(message: Message, pozwij, sell, client) {
         case "8pilka":
             n.pilka(args, message);
             break;
+        case "cookie":
         case "ciastko":
             n.ciastko(message, client);
             break;

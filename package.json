@@ -6,7 +6,8 @@
   "scripts": {
     "build": "gulp",
     "start": "node dist/main.js",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "dev": "gulp && node dist/main.js"
   },
   "keywords": [
     "bot",

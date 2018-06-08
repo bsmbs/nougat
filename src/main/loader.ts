@@ -6,6 +6,8 @@ export { default as sprzedaj } from '../modules/sprzedaj';
 export { default as autorole } from '../commands/admin/autorole';
 export { default as ban } from '../commands/admin/ban';
 export { default as czysc } from '../commands/admin/czysc';
+export { default as jail } from '../commands/admin/jail';
+export { default as lang } from '../commands/admin/lang';
 export { default as nazwa } from '../commands/admin/nazwa';
 export { default as warn } from '../commands/admin/warn';
 export { default as zakazane } from '../commands/admin/zakazane';
