@@ -11,5 +11,7 @@
     "_kom5": "mongo - adres bazy mongodb z nazwa bazy danych, np. localhost/nougat",
         "mongo": "localhost/nougat",
     "_kom6": "host - nick osoby hostującej, możliwe że twój",
-        "host": ""
+        "host": "",
+    "_kom7": "tablica id moderatorow (ty tez masz dostep do funkcji moderatora)",
+        "mods": ["4321", "1234"]
 }

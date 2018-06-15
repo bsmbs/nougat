@@ -35,7 +35,7 @@ export function handluj(message: Message, pozwij, sell, client) {
             break;
         // eco
         case "biedronka":
-            n.biedronka(message);
+            n.biedronka(args, message);
             break;
         case "hajs":
             n.hajs(args, message);
