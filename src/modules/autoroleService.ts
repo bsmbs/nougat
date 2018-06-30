@@ -1,7 +1,7 @@
 import { GuildMember, RichEmbed } from 'discord.js';
 import { Nougat } from '../main/main';
 
-export function onJoin(member: GuildMember) {
+export function autoroleService(member: GuildMember) {
     Nougat.Serwer.find({id: member.guild.id}, (err, wyniki) => {
         if (err) return;
         if(typeof wyniki[0].autorola != 'undefined') {

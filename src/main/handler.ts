@@ -30,6 +30,9 @@ export function handluj(message: Message, pozwij, sell, client) {
         case "warn":
             n.warn(args, message);
             break;
+        case "welcome":
+            n.welcome(args, message);
+            break;
         case "zakazane":
             n.zakazane(args, message);
             break;

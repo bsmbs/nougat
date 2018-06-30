@@ -9,6 +9,7 @@ export { default as czysc } from '../commands/admin/czysc';
 export { default as jail } from '../commands/admin/jail';
 export { default as nazwa } from '../commands/admin/nazwa';
 export { default as warn } from '../commands/admin/warn';
+export { default as welcome } from '../commands/admin/welcome';
 export { default as zakazane } from '../commands/admin/zakazane';
 // eco
 export { default as biedronka} from '../commands/eco/biedronka';

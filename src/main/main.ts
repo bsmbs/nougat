@@ -7,7 +7,7 @@ import { punkty } from '../modules/punkty';
 import { ready } from './ready';
 import { check } from './check';
 import { zakazane } from '../modules/zakazane';
-import { onJoin } from '../modules/autoroleService';
+import { onJoin } from '../modules/onJoin';
 
 export class Nougat {
     config: any;
@@ -64,6 +64,7 @@ export class Nougat {
             id: String,
             nougatCount: Number,
             msgCount: Number,
+            welcome: String,
             zakazane: {
                 type: Array,
                 default: []
@@ -116,7 +117,7 @@ export class Nougat {
                         }
                     })*/
                 }
-                 handluj(message, pozwij, sprzedaj, this.client);
+                handluj(message, pozwij, sprzedaj, this.client);
             } else {
                 check(message, pozwij, sprzedaj);
                 if (message.guild) zakazane(message);
