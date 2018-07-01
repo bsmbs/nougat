@@ -7,7 +7,7 @@ export default function hajs(args, message) {
         if(args[0]) {
             if(args[0] == 'set') {
                 // sprawdza czy pizza
-                if(message.author.id == config.cidautora) {
+                if(message.author.id == config.id) {
                     if(message.mentions.members.first() && args[2]) {
                         Nougat.Uzytnik.find({
                             uid: message.mentions.members.first().id

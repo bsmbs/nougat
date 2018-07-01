@@ -25,6 +25,10 @@ let komendy = [
                 cmd: "zakazane",
                 args: "[dodaj|usun|lista]",
                 opis: "Zarządza zakazanymi wyrazami"
+            }, {
+                cmd: "welcome",
+                args: "[/wylacz|nowa wiadomośc powitalna]",
+                opis: "Konfiguruje wiadomośc wysyłaną do użytkowników po dołączeniu na serwer"
             }
     ]},
     {
@@ -41,6 +45,14 @@ let komendy = [
             cmd: "kup",
             args: "<id produktu>",
             opis: "Kupuje wskazany produkt"
+        },{
+            cmd: "top",
+            args: "",
+            opis: "Wyświetla top użytkowników najbogatszych"
+        },{
+            cmd: "rank",
+            args: "",
+            opis: "Wyświetla twoją pozycje w topce najbogatszych"
         },{
             cmd: "sprzedaj",
             args: "brak",

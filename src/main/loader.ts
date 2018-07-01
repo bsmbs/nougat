@@ -15,6 +15,8 @@ export { default as zakazane } from '../commands/admin/zakazane';
 export { default as biedronka} from '../commands/eco/biedronka';
 export { default as hajs } from '../commands/eco/hajs';
 export { default as kup } from '../commands/eco/kup';
+export { default as rank } from '../commands/eco/rank';
+export { default as top } from '../commands/eco/top';
 export { default as sprzedajc } from '../commands/eco/sprzedaj';
 export { default as zaplac } from '../commands/eco/zaplac';
 // info

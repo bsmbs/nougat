@@ -26,7 +26,7 @@ export default function welcome(args, message: Message) {
                 const ctsEmbed = new RichEmbed()
                     .setAuthor('Nougat', 'https://cdn.discordapp.com/avatars/429587398511427584/a8d77ae510e68cc595c1ccda04a755fa.jpg?size=1024')
                     .setColor((Math.random() * 0xFFFFFF << 0).toString(16))
-                    .setTitle('Aktualna wiadomośc powitalna')
+                    .setTitle('Wiadomość powitalna jest wysyłana bezpośrednio do nowego członka. Aktualna:')
                     .setDescription(gds.welcome)
                     .addField("Aby ustawić nową wiadomośc powitalną", "welcome <wiadomosc powitalna>")
                     .addField("Aby wyłączyć", "welcome /wylacz")
