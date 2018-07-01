@@ -8,6 +8,7 @@ export function punkty(message) {
             // przyznaj HAJS ZA PISANKO
             if(uzyt[0].zajety+60 < (new Date()).getTime()/1000) { // jeżeli od ostatniej wiadomosci minelo 60 sekund
                 // uzyt[0].zajety = true;
+                uzyt[0].nick = message.author.username;
                 var is = Math.floor((Math.random() * 10) + 0);
                 uzyt[0].hajs += is;
                 uzyt[0].zajety = (new Date()).getTime()/1000;
