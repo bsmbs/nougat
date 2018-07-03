@@ -16,7 +16,7 @@ export default function biedronka(args, message: Message) {
                 })
             }
         }
-    } else if(args[0]) {
+    } else if(typeof args[0] != 'undefined') {
         Nougat.Prodkt.findOne({ _id: args[0] }, (err, dok) => {
             if(err) return;
             if(!dok) return;
