@@ -52,6 +52,7 @@ export default function biedronka(args, message: Message) {
                     docs.forEach((produkt) => {
                         if(liczba < 10) {
                             let wynikor;
+                            liczba++
                             if(produkt.cena > uzyt[0].hajs) wynikor = "Nie stać cię!";
                             else wynikor = "*kup " + produkt._id
                             biedraEmbed.addField(`${produkt._id}: ${produkt.name}`, "Cena: " + produkt.cena + " BTC, " + wynikor);
