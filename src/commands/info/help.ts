@@ -49,7 +49,7 @@ export default function help(message: Message) {
         .addField('Informacja', '`yt <nazwa kanalu>`, `userinfo [uzytkownik]`, `git`, `check`, `checkme`')
         .addField('Obrazki', 'Do każdej wiadomości z komendą dołącz obrazek: `kolory`, `rozjasnij`, `sepia`, `przekrec`')
         .addField('Administracja', '`nazwa <nowa nazwa bota>`, `warn <uzytkownik> [powod]`, `czysc <ilosc wiadomosci>`, `zakazane`, `autorole <nazwa roli|usun>`, `jail <mention|nazwa roli>`, `welcome`')
-        .setFooter('Nougat v3.1 (1.07.2018) by Pizza, hostuje '+config.host)
+        .setFooter('Nougat v3.1 (6.07.2018) by Pizza, hostuje '+config.host)
         /*message.author.send({embed: interaktywne})
         message.author.send({embed: zabawa})
         message.author.send({embed: info})
