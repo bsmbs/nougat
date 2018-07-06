@@ -13,5 +13,7 @@
     "_kom6": "host - nick osoby hostującej, możliwe że twój",
         "host": "",
     "_kom7": "tablica id moderatorow (ty tez masz dostep do funkcji moderatora)",
-        "mods": ["4321", "1234"]
+        "mods": ["4321", "1234"],
+    "_kom8": "id agentów do nougata, jezeli dodasz bota wykorzystujacego ta funkcje nougata to dodaj jego id tu",
+        "agents": []
 }

@@ -8,6 +8,7 @@ import { ready } from './ready';
 import { check } from './check';
 import { zakazane } from '../modules/zakazane';
 import { onJoin } from '../modules/onJoin';
+import { agents } from '../modules/agents';
 
 export class Nougat {
     config: any;
@@ -103,7 +104,10 @@ export class Nougat {
         this.client.on('ready', () => ready(this.client));
         this.client.on('guildMemberAdd', member => onJoin(member))
         this.client.on("message", message => {
-            if(message.author.bot) return;
+            if(message.author.bot) {
+                agents(message);
+                return;
+            }
             this.dodajPunkty(message);
             if(message.content.startsWith(this.config.prefix)) {
                 if (message.guild) {
