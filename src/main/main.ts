@@ -105,7 +105,7 @@ export class Nougat {
         this.client.on('guildMemberAdd', member => onJoin(member))
         this.client.on("message", message => {
             if(message.author.bot) {
-                agents(message);
+                //agents(message);
                 return;
             }
             this.dodajPunkty(message);
