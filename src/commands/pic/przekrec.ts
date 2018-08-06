@@ -1,15 +1,12 @@
+import { getfoto } from "./getfoto";
+
 const Jimp = require('jimp');
 
 export default function przekrec(args, message) {
-    let link = args.slice(0).join(" ");
-    if(message.attachments.first()) {
-        var url = message.attachments.first().url
-    } else {
-        if (link == '') return;
-        var url = link;
-    }
+    getfoto(message, args)
+    .then(pic => {
         message.channel.send('Chwileczkę...');
-        Jimp.read(url, function(err, obrazek) {
+        Jimp.read(pic, function(err, obrazek) {
             if (err) return;
             obrazek.color([{apply: 'hue', params: [120]}]).getBuffer(Jimp.AUTO, function(err, buf) {
                 if (err) return;
@@ -18,4 +15,7 @@ export default function przekrec(args, message) {
                 })
             })
         })
+    })
+    .catch(err => message.channel.send(err))
+        
     }

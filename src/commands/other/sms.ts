@@ -1,6 +1,14 @@
-import { RichEmbed } from 'discord.js';
-export default function sms(args, message) {
-    let numer = message.mentions.members.first();
+import { RichEmbed, User, Message } from 'discord.js';
+export default function sms(args, message: Message) {
+    let numer: User;
+    if(message.mentions.users.first()) {
+        numer = message.mentions.users.first();
+    } else {
+        let bab = message.guild.members.get(args[0]).user
+        if(typeof bab != 'undefined') {
+            numer = bab;
+        }
+    }
     let wiadomosc = args.slice(1).join(" ");
     if(typeof numer == 'undefined' || typeof wiadomosc == 'undefined') {
         const errEmbed = new RichEmbed()

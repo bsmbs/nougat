@@ -1,15 +1,11 @@
 const Jimp = require('jimp');
+import {getfoto} from './getfoto';
 
 export default function jasny(args, message) {
-    let link = args.slice(0).join(" ");
-    if(message.attachments.first()) {
-        var url = message.attachments.first().url
-    } else {
-        if (link == '') return;
-        var url = link;
-    }
+    getfoto(message, args)
+    .then((pic) => {
         message.channel.send('Chwileczkę...');
-        Jimp.read(url, function(err, obrazek) {
+        Jimp.read(pic, (err, obrazek) => {
             if (err) return;
             obrazek.color([
                 {apply: 'lighten', params: [ 30 ]}
@@ -18,6 +14,8 @@ export default function jasny(args, message) {
                 message.channel.send({files: [buf]}).catch((e) => {
                     message.channel.send("Nie udało się wysłać obrazka, prawdopodobnie bot nie ma do tego uprawnień.")
                 })
-            })
+            }) 
         })
+    })
+    .catch(err => message.channel.send(err))
 }
