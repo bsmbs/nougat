@@ -2,7 +2,7 @@
 
 export function ready(client) {
     console.log(`Nougat zalogowany jako ${client.user.tag}`);
-    client.user.setActivity('na '+client.guilds.size+' serwerach!', {
+    client.user.setActivity('nougat.papryka.pro', {
         type: 'LISTENING'
     });
 }
