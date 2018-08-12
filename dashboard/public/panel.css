@@ -2,6 +2,7 @@ body {
     margin: 0;
     font-family: 'Source Sans Pro', sans-serif;
     background: #23272a;
+    text-rendering: optimizeLegibility !important;
     color: white;
 }
 
@@ -203,6 +204,7 @@ body {
 
 .topek img {
     width: 40px;
+    height: 40px;
     border-radius: 20px;
 }
 
