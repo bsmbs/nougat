@@ -130,7 +130,10 @@ fetch("/api/discord/guilds", { credentials: 'include' })
             let icon = document.createElement("img")
             icon.src = `https://cdn.discordapp.com/icons/${gg.id}/${gg.icon}.png`
             icon.onerror = function() {
-                icon.src = 'https://i.imgur.com/uuAkET8.png';
+                icon.src = null;
+                icon.style.width = '100px';
+                icon.style.height = '100px';
+                icon.style.background = '#222';
             }
             newel.appendChild(icon);
 
