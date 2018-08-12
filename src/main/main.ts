@@ -4,11 +4,13 @@ import * as ai from 'mongoose-auto-increment';
 import { handluj } from './handler';
 import { serwerm } from '../modules/serwer';
 import { punkty } from '../modules/punkty';
+import { punktys } from '../modules/punktys';
 import { ready } from './ready';
 import { check } from './check';
 import { zakazane } from '../modules/zakazane';
 import { onJoin } from '../modules/onJoin';
 import { agents } from '../modules/agents';
+const dashboard = require('../../../dashboard/main')
 
 export class Nougat {
     config: any;
@@ -36,7 +38,6 @@ export class Nougat {
         this.db.on('error', (err) => {
             throw new Error("Nie można się połączyć z bazą danych mongodb");
         })
-
         this.userSchema = new Mongo.Schema({
             uid: String, // id discorda
             hajs: Number, // stan konta uzytkownika
@@ -54,7 +55,13 @@ export class Nougat {
                 nazwa: String,
                 cena: Number,
                 zaw: String
-        }})
+            },
+            serwery: [{
+                id: String,
+                punkty: Number,
+                zajety: Number
+            }]
+            })
         this.produktSchema = new Mongo.Schema({
             name: String, // nazwa produktu
             cena: Number, // cena
@@ -86,7 +93,13 @@ export class Nougat {
     }
 
     start() {
-        this.client.login(this.config.token);
+        this.client.login(this.config.token).catch(err => {
+            console.log(err)
+        })
+
+        const dshb = new dashboard(this.client, Nougat.Uzytnik, Nougat.Prodkt, Nougat.Serwer);
+        dshb.init();
+        dshb.start();
         let pozwij = {
             mode: [],
             modev: [],
@@ -100,7 +113,6 @@ export class Nougat {
             cena: [],
             zaw: []
         }
-
         this.client.on('ready', () => ready(this.client));
         this.client.on('guildMemberAdd', member => onJoin(member))
         this.client.on("message", message => {
@@ -132,6 +144,7 @@ export class Nougat {
     dodajPunkty(message) {
         if(message.guild) {
             punkty(message);
+            punktys(message);
             serwerm(message.guild, 0);
         }
     }

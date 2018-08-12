@@ -7,7 +7,7 @@ export function zakazane(message) {
         if(guds.length) {
             try {
                 guds[0].zakazane.forEach((ss) => {
-                    if(message.content.includes(ss)) {
+                    if(message.content.toLowerCase().includes(ss)) {
                         message.delete().catch(() => {
                             // moze kiedys wysylac na kanal logow
                         })

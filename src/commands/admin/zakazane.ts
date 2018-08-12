@@ -14,7 +14,7 @@ export default function zakazane(args, message) {
                         id: message.guild.id
                     }, (err, guds) => {
                         if(guds.length) {
-                            guds[0].zakazane.push(slowo);
+                            guds[0].zakazane.push(slowo.toLowerCase());
                             guds[0].save();
                             message.channel.send({
                                 embed: new RichEmbed()

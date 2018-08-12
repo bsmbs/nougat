@@ -53,7 +53,7 @@ export function handluj(message: Message, pozwij, sell, client) {
             n.sprzedajc(message, sell.mode, sell.modev);
             break;
         case "top":
-            n.top(message);
+            n.top(message, args);
             break;
         case "zaplac":
             n.zaplac(args, message);
