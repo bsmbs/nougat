@@ -537,6 +537,7 @@ function wiecej(gg) {
 
             let highest;
             data.arrtop.forEach((user, index) => {
+                if(index < 10) {
                 let topek = document.createElement("div")
                 topek.className = 'topek';
 
@@ -547,6 +548,12 @@ function wiecej(gg) {
 
                 let av = document.createElement("img");
                 av.src = user.av;
+                av.onerror = function() {
+                    av.removeAttribute('src');
+                    av.style.width = '100px';
+                    av.style.height = '100px';
+                    av.style.background = '#222';
+                }
                 av.height = '40';
                 topek.appendChild(av);
 
@@ -577,6 +584,7 @@ function wiecej(gg) {
                 topek.appendChild(punkty);
 
                 document.getElementsByClassName("topka")[0].appendChild(topek);
+                }
             })
         })
 
