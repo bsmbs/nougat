@@ -23,10 +23,9 @@ body {
 
 .lnk {
     display: inline-block;
-    text-transform: uppercase;
     cursor: pointer;
     padding: 15px;
-    font-family: 'Fjalla One', sans-serif;
+    font-family: 'Varela Round', sans-serif;
     transition: 300ms;
 }
 
@@ -38,8 +37,7 @@ body {
 .userr {
     display: inline-flex;
     align-items: center;
-    text-transform: uppercase;
-    font-family: 'Fjalla One', sans-serif;
+    font-family: 'Varela Round', sans-serif;
     padding: 15px;
     transition: 300ms;
 }
@@ -76,12 +74,16 @@ body {
 .active {
     background: #307c31;
 }
-
+#list {
+    display: flex;
+    flex-wrap: wrap;
+}
 .srv {
     background-color: #0d47a1;
-    margin: 10px;
-    border-radius: 5px;
-    width: 250px;
+
+    border-radius: 8px;
+    box-sizing: border-box;
+    border: 3px solid #23272a;
     padding: 15px;
     display: inline-block;
     cursor: pointer;
@@ -113,7 +115,7 @@ body {
 #serwer {
     margin: auto;
     display: none;
-    font-family: 'Fjalla One', sans-serif;
+    font-family: 'Varela Round', sans-serif;
 }
 
 #ogolne {}
@@ -126,7 +128,6 @@ body {
     padding: 15px;
     flex-direction: row;
     align-items: center;
-    text-transform: uppercase;
     cursor: default;
 }
 
@@ -156,6 +157,14 @@ body {
     #serwer {
         width: 60%;
     }
+    .srv {
+        width: 25%;
+    }
+}
+@media screen and (max-width: 996px) {
+    .srv {
+        width: 100%;
+    }
 }
 
 #miejsce {
@@ -168,7 +177,6 @@ body {
 
 .porw {
     flex-grow: 1;
-    text-transform: uppercase;
     text-align: center;
     transition: 300ms;
 }
@@ -192,7 +200,7 @@ body {
 .zakladka {
     display: block;
     padding: 15px;
-    font-family: 'Fjalla One', sans-serif;
+    font-family: 'Varela Round', sans-serif;
     text-align: center;
     font-size: 150%;
 }
@@ -203,7 +211,7 @@ body {
 }
 
 .topek img {
-    width: 40px;
+    width: 40px !important;
     height: 40px;
     border-radius: 20px;
 }
@@ -286,13 +294,14 @@ body {
 
 .btn {
     outline: none;
+    font-family: 'Varela Round', sans-serif;
     border: none;
     background: #222;
     border-radius: 3px;
     padding: 8px 24px;
     box-shadow: 3px 3px 21px -4px rgba(0, 0, 0, 0.75);
     transition: 300ms;
-    font-family: 'Fjalla One', sans-serif;
+    font-family: 'Varela Round', sans-serif;
     font-size: 100%;
     color: white;
 }
@@ -379,7 +388,6 @@ body {
 
 .opis {
     padding: 15px;
-    text-transform: none;
     font-family: 'Source Sans Pro', sans-serif;
     color: gray;
 }
@@ -395,7 +403,6 @@ body {
 
 .zakazany-klucz {
     font-family: 'Source Sans Pro', sans-serif;
-    text-transform: lowercase;
 }
 
 .zakazany {
@@ -404,7 +411,7 @@ body {
 }
 
 #ty {
-    font-family: 'Fjalla One', sans-serif;
+    font-family: 'Varela Round', sans-serif;
 }
 
 .witaj {
@@ -435,5 +442,6 @@ body {
 .btn-ct {
     margin: auto;
     display: block;
-    width: 200px;
+    width: 230px;
 }
+

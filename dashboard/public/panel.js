@@ -550,8 +550,8 @@ function wiecej(gg) {
                 av.src = user.av;
                 av.onerror = function() {
                     av.removeAttribute('src');
-                    av.style.width = '100px';
-                    av.style.height = '100px';
+                    av.style.width = '40px';
+                    av.style.height = '40px';
                     av.style.background = '#222';
                 }
                 av.height = '40';
