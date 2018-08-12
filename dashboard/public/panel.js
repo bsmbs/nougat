@@ -129,6 +129,9 @@ fetch("/api/discord/guilds", { credentials: 'include' })
 
             let icon = document.createElement("img")
             icon.src = `https://cdn.discordapp.com/icons/${gg.id}/${gg.icon}.png`
+            icon.onerror = function() {
+                icon.src = 'https://i.imgur.com/uuAkET8.png';
+            }
             newel.appendChild(icon);
 
             let name = document.createElement("span")
