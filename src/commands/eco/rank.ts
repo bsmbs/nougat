@@ -1,8 +1,10 @@
 import { RichEmbed, Message } from 'discord.js';
 import { Nougat } from '../../main/main';
+let config = require('../../../../settings.json')
 
 export default function rank(args, message: Message) {
-    Nougat.Uzytnik.find({}, (err, topa) => {
+    message.channel.send("Sprawdź na: "+config.dashboard.url)
+    /*Nougat.Uzytnik.find({}, (err, topa) => {
         if(err || !topa) return;
         topa.sort((a, b) => {return b.hajs-a.hajs});
         const biednyEmbed = new RichEmbed()
@@ -11,7 +13,7 @@ export default function rank(args, message: Message) {
 
         topa.forEach((item, index) => {
             if(item.uid == message.author.id) {
-                biednyEmbed.addField("Ogólnie", `${index+1} miejsce`, true);
+                biednyEmbed.addField("Hajs ogólnie", `${index+1} miejsce`, true);
             }
         });
 
@@ -19,10 +21,10 @@ export default function rank(args, message: Message) {
         topa.forEach((item) => {
             if(message.guild.members.get(item.uid)) {
                 ri++;
-                if(item.uid == message.author.id) biednyEmbed.addField("Na serwerze", `${ri} miejsce`, true)
+                if(item.uid == message.author.id) biednyEmbed.addField("Punkty aktywności na serwerze", `${ri} miejsce`, true)
             }
         })
 
         message.channel.send({embed: biednyEmbed})
-    })
+    })*/
 }

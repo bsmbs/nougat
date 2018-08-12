@@ -1,0 +1,436 @@
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    background: #23272a;
+    color: white;
+}
+
+.gora {
+    display: flex;
+    align-items: center;
+    top: 0;
+    position: sticky;
+}
+
+#serwery {
+    display: none
+}
+
+.ctn {
+    margin: 20px;
+}
+
+.lnk {
+    display: inline-block;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 15px;
+    font-family: 'Fjalla One', sans-serif;
+    transition: 300ms;
+}
+
+.lnk:hover,
+.userr:hover {
+    background: #307c31;
+}
+
+.userr {
+    display: inline-flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: 'Fjalla One', sans-serif;
+    padding: 15px;
+    transition: 300ms;
+}
+
+.userr img {
+    width: 40px;
+    border-radius: 20px;
+    background: #364047
+}
+
+#ogolne>img {
+    width: 120px;
+    display: block;
+    margin: auto;
+    border-radius: 60px;
+    background: #364047
+}
+
+.lnkst {
+    padding: 0 10px;
+}
+
+.lnkso {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    transition: 300ms;
+}
+
+.lnkso:hover {
+    background: #307c31;
+}
+
+.active {
+    background: #307c31;
+}
+
+.srv {
+    background-color: #0d47a1;
+    margin: 10px;
+    border-radius: 5px;
+    padding: 15px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+.srv:hover {
+    background: #1260d4;
+}
+
+.srv img {
+    width: 100px;
+    border-radius: 50px;
+    margin: auto;
+    display: block;
+}
+
+.srv .guildname {
+    font-size: 120%;
+    font-weight: bolder;
+    display: block;
+    padding: 5px 0;
+}
+
+.srv .status {
+    display: block;
+}
+
+#serwer {
+    margin: auto;
+    display: none;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+#ogolne {}
+
+.panel {
+    transition: 300ms;
+    background: #2b2f33;
+    border-radius: 6px 6px 0 0;
+    display: none;
+    padding: 15px;
+    flex-direction: row;
+    align-items: center;
+    text-transform: uppercase;
+    cursor: default;
+}
+
+#spinner {
+    display: block;
+    top: 47%;
+    left: 47%;
+    position: absolute;
+    border: 8px solid transparent;
+    border-radius: 50%;
+    border-top: 8px solid #3498db;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (min-width: 996px) {
+    #serwer {
+        width: 60%;
+    }
+}
+
+#miejsce {
+    font-size: 150%;
+}
+
+.por {
+    display: flex;
+}
+
+.porw {
+    flex-grow: 1;
+    text-transform: uppercase;
+    text-align: center;
+    transition: 300ms;
+}
+
+.porw:hover {
+    opacity: 0.5;
+}
+
+.por-liczba {
+    color: lightblue;
+    font-size: 150%;
+    display: block;
+}
+
+.por-liczba-big {
+    color: lightblue;
+    font-size: 400%;
+    display: block;
+}
+
+.zakladka {
+    display: block;
+    padding: 15px;
+    font-family: 'Fjalla One', sans-serif;
+    text-align: center;
+    font-size: 150%;
+}
+
+.topek {
+    display: flex;
+    align-items: center;
+}
+
+.topek img {
+    width: 40px;
+    border-radius: 20px;
+}
+
+.topnick {
+    flex-basis: 20%;
+    padding: 10px;
+}
+
+.progress {
+    flex-grow: 0;
+    height: 20px;
+    position: relative;
+    background: #222;
+    border-radius: 25px;
+    width: 100%;
+}
+
+.progress>span {
+    display: block;
+    height: 100%;
+    border-radius: 25px;
+    background: #307c31;
+    position: relative;
+    overflow: hidden;
+}
+
+.miejsce {
+    color: lightblue;
+    font-size: 150%;
+    padding: 10px;
+}
+
+.punkty {
+    padding: 10px;
+    font-size: 90%;
+    flex-basis: 8%;
+    text-align: center;
+}
+
+.wybor-ct {
+    display: flex;
+    margin: 10px 0;
+    background: #2b2f33;
+    border-radius: 6px 6px 0 0;
+}
+
+.wybor {
+    flex-grow: 1;
+    border-radius: 6px 6px 0 0;
+    padding: 10px;
+    text-align: center;
+}
+
+.autorole-zakladka {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.autorole-ct {
+    border-radius: 20px;
+    border: 1px solid #222;
+    display: inline-flex;
+    margin: auto;
+    align-items: center;
+    padding: 4px;
+}
+
+.rola-kolor {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background: #222;
+    display: inline-block;
+}
+
+.rola-name {
+    padding: 0 5px;
+}
+
+.btn {
+    outline: none;
+    border: none;
+    background: #222;
+    border-radius: 3px;
+    padding: 8px 24px;
+    box-shadow: 3px 3px 21px -4px rgba(0, 0, 0, 0.75);
+    transition: 300ms;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 100%;
+    color: white;
+}
+
+.green {
+    background: #307c31;
+}
+
+.green:hover {
+    background: #235a24;
+}
+
+.red {
+    background: #d52a27;
+}
+
+.red:hover {
+    background: #b91313;
+}
+
+.blu {
+    background: #3498db;
+}
+
+.blu:hover {
+    background: #175985;
+}
+.githubowy {
+    background: #24292e;
+}
+.githubowy:hover {
+    background: #1d2125;
+}
+#popp {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    display: none;
+    top: 50%;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+    background: #222;
+}
+
+.popp-title {
+    font-weight: bolder;
+    font-size: 120%;
+    display: block;
+    padding: 15px 0 10px 15px;
+}
+
+.popp-text {
+    color: lightgray;
+    display: block;
+    padding: 0 10px 10px 15px;
+}
+
+.popp-input {
+    border: none;
+    outline: none;
+    background: #333;
+    padding: 12px 16px;
+    color: white;
+    font-size: 100%;
+    width: 25rem;
+    display: block;
+    border-radius: 5px;
+    margin: 0 15px 15px 15px;
+}
+
+.popp-btns {
+    margin: 15px;
+    display: flex;
+}
+
+.popp-btns .btn {
+    margin: 5px;
+}
+
+.naglowek {
+    display: flex;
+    align-items: center;
+}
+
+.opis {
+    padding: 15px;
+    text-transform: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: gray;
+}
+
+#aktualna {
+    color: white;
+    display: block;
+}
+
+.wieksza-zakladka .btn {
+    margin-left: 15px;
+}
+
+.zakazany-klucz {
+    font-family: 'Source Sans Pro', sans-serif;
+    text-transform: lowercase;
+}
+
+.zakazany {
+    display: flex;
+    padding: 15px;
+}
+
+#ty {
+    font-family: 'Fjalla One', sans-serif;
+}
+
+.witaj {
+    font-weight: lighter;
+    font-size: 160%;
+    text-align: center;
+}
+
+#user-av {
+    width: 80px;
+    margin: auto;
+    height: 80px;
+    display: block;
+    border-radius: 40px;
+}
+
+#user-nick {
+    text-align: center;
+    width: auto;
+    display: block;
+    margin: 10px;
+    font-size: 200%;
+}
+#ty button {
+    display: inline-block;
+    margin: auto;
+}
+.btn-ct {
+    margin: auto;
+    display: block;
+    width: 200px;
+}

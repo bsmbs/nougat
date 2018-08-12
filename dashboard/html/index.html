@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Nougat Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="spinner"></div>
+    <div class="container">
+        <div class="login">
+            <img width="40px" style="display: block; margin: auto; width: 40px; padding: 25px;" src="https://i.imgur.com/uuAkET8.png">
+            <div class="btn dsc" id="login">
+                <div class="btnimg">
+                    <img src="https://discordapp.com/assets/1c8a54f25d101bdc607cec7228247a9a.svg">
+                </div>
+                <div class="btntxt">
+                    Zaloguj za pomocą Discorda
+                </div>
+            </div>
+            <div class="btn ng" id="add">
+                <div class="btnimg">
+                    <img src="https://i.imgur.com/uuAkET8.png">
+                </div>
+                <div class="btntxt">
+                    Dodaj na serwer
+                </div>
+            </div>
+            <span style="color: white; display: block">beta v4.0</span>
+            <span style="display: block; color: lightgray;">&copy; pizza61 2018 * <a href="https://github.com/pizza61/nougat">github</a></span>
+        </div>
+    </div>
+    <footer>Ta strona używa cookies do poprawnego funkcjonowania</footer>
+    <script>
+        const FETCH_TIMEOUT = 5000;
+        let didTimeOut = false;
+
+        fetch('/api/discord/check', {credentials: 'include'})
+        .then(response => {
+            if(response.ok) window.location = '/panel';
+            else {
+                document.getElementsByClassName("spinner")[0].style.display = 'none';
+                document.getElementsByClassName("login")[0].style.display = 'block';
+            }
+        })
+
+        document.getElementById("login").addEventListener("click", function() {
+            window.location = "/api/discord/login"
+        })
+
+        document.getElementById("add").addEventListener("click", function() {
+            window.open("https://discordapp.com/oauth2/authorize?client_id=429587398511427584&permissions=469822598&scope=bot", "_blank")
+        })
+    </script>
+</body>
+
+</html>
