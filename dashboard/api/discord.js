@@ -146,7 +146,7 @@ router.get('/more', (req, res) => {
                                     id: user.uid,
                                     dsc: req.djs.users.get(user.uid).discriminator,
                                     nick: user.nick,
-                                    av: req.djs.users.get(user.uid).avatarURL,
+                                    av: `https://cdn.discordapp.com/avatars/${user.uid}/${req.djs.users.get(user.uid).avatar}?size=64`,
                                     punkty: ta.punkty
                                 })
                             }
