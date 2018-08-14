@@ -7,7 +7,7 @@ Nougat to bot na Discorda. Posiada ponad 30 komend z 5 różnych kategorii!!
 Funkcje przydatne administratorom serwerów (discord) takie jak: autorole, czyszczenie czatu, zakazane słowa i ARESZT (jail)
 
 ## [Invite bota](https://discordapp.com/api/oauth2/authorize?client_id=429587398511427584&permissions=469822598&scope=bot)
-* Dashboard
+* [Dashboard (beta)](https://nougat.papryka.pro)
 
 ## Konfiguracja
 Wymagania:

@@ -41,7 +41,7 @@ export default function help(message: Message) {
     const pomoc = new RichEmbed()
         .setAuthor("Nougat - Prefix: " + config.prefix, 'https://cdn.discordapp.com/avatars/429587398511427584/a8d77ae510e68cc595c1ccda04a755fa.jpg?size=1024')
         .setColor(color.toString(16))
-        .setTitle("NOWOŚĆ! Dashboard: https://nougat.papryka.pro")
+        .setTitle("NOWOŚĆ! Dashboard: "+config.dashboard.url)
         .addField('I n t e r a k t y w n e', '`pozwij`, `sprzedaj`')
         .addField('Ekonomia', '`zaplac <osoba> <kwota>`, `kup <id>`, `biedronka`, `hajs`, `rank`, `top`')
         .addField('Zabawa', '`8pilka <zapytanie>`, `odwroc <tekst do odwrocenia>`, `ciastko`, `statek <pierwszy> <drugi>`, `mono`, `wybierz <co wybrac oddzielone |>`')
