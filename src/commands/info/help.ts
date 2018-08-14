@@ -46,7 +46,7 @@ export default function help(message: Message) {
         .addField('Ekonomia', '`zaplac <osoba> <kwota>`, `kup <id>`, `biedronka`, `hajs`, `rank`, `top`')
         .addField('Zabawa', '`8pilka <zapytanie>`, `odwroc <tekst do odwrocenia>`, `ciastko`, `statek <pierwszy> <drugi>`, `mono`, `wybierz <co wybrac oddzielone |>`')
         .addField('Społecznościowe', '`sms <osoba> <wiadomosc>`')
-        .addField('Informacja', '`yt <nazwa kanalu>`, `userinfo [uzytkownik]`, `git`, `check`, `checkme`')
+        .addField('Informacja', '`yt <nazwa kanalu>`, `userinfo [uzytkownik]`, `git`, `check`, `checkme`, `dashboard`')
         .addField('Obrazki', 'Do każdej wiadomości z komendą dołącz obrazek: `kolory`, `jasny`, `sepia`, `przekrec`')
         .addField('Administracja', '`nazwa <nowa nazwa bota>`, `warn <uzytkownik> [powod]`, `czysc <ilosc wiadomosci>`, `zakazane`, `autorole <nazwa roli|usun>`, `jail <mention|nazwa roli>`, `welcome`')
         .setFooter('Nougat v4.0 (12.08.2018) by Pizza, hostuje '+config.host)

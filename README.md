@@ -2,7 +2,7 @@
 
 # Nougat ![GitHub last commit](https://img.shields.io/github/last-commit/pizza61/nougat.svg?style=for-the-badge) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/pizza61/nougat.svg?style=for-the-badge) ![GitHub Release](https://img.shields.io/github/release/pizza61/nougat.svg?style=for-the-badge)
 
-Nougat to bot na Discorda. Posiada ponad 30 komend z 5 różnych kategorii!! 
+Nougat to bot na Discorda. Posiada ponad 35 komend z 5 różnych kategorii!! 
 
 Funkcje przydatne administratorom serwerów (discord) takie jak: autorole, czyszczenie czatu, zakazane słowa i ARESZT (jail)
 

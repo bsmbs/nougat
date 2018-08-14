@@ -21,6 +21,7 @@ export { default as sprzedajc } from '../commands/eco/sprzedaj';
 export { default as zaplac } from '../commands/eco/zaplac';
 // info
 export { default as check } from '../commands/info/check';
+export { default as dashboard } from '../commands/info/dashboard';
 export { default as git } from '../commands/info/git';
 export { default as help } from '../commands/info/help';
 export { default as staty } from '../commands/info/staty';

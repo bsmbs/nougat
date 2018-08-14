@@ -65,6 +65,9 @@ export function handluj(message: Message, pozwij, sell, client) {
         case "checkme":
             n.check(message, client, 1);
             break;
+        case "dashboard":
+            n.dashboard(message);
+            break;
         case "git":
             n.git(message);
             break;
