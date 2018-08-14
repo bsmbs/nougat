@@ -138,7 +138,8 @@ router.get('/more', (req, res) => {
                     let arrtop = [];
                     let index = 0;
                     topa.forEach(user => {
-                        let ta = user.serwery.find(x => x.id == req.query.guild)
+                        if(req.djs.guilds.get(req.query.guild).members.get(user.uid)) {
+                            let ta = user.serwery.find(x => x.id == req.query.guild)
                             if(ta) {
                                 index++;
                                 arrtop.push({
@@ -149,6 +150,7 @@ router.get('/more', (req, res) => {
                                     punkty: ta.punkty
                                 })
                             }
+                        }
                     })
                     arrtop.sort((a, b) => { return b.punkty - a.punkty });
                     if(arrtop.find(x => x.id == usid)) {

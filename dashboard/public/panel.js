@@ -554,7 +554,6 @@ function wiecej(gg) {
                     av.style.height = '40px';
                     av.style.background = '#222';
                 }
-                av.height = '40';
                 topek.appendChild(av);
 
                 let topnick = document.createElement("div");

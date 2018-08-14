@@ -165,6 +165,9 @@ body {
     .srv {
         width: 100%;
     }
+    .progress {
+        display: none;
+    }
 }
 
 #miejsce {
@@ -212,7 +215,6 @@ body {
 
 .topek img {
     width: 40px !important;
-    height: 40px;
     border-radius: 20px;
 }
 
