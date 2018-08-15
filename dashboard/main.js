@@ -1,5 +1,6 @@
 let express = require("express");
 const path = require("path");
+const config = require('../settings.json')
 
 class dashboard {
     constructor(client, serw, prodkt, serwer) {
@@ -19,6 +20,9 @@ class dashboard {
             res.sendFile(path.join(__dirname, "html/panel.html"))
         })
 
+        this.app.get("/invite", (req, res) => {
+            res.redirect(config.invite)
+        })
         this.app.use('/api/discord', (req, res, next) => {
             req.djs = this.client;
             req.uzytnik = this.serw;

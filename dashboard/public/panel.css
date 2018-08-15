@@ -74,13 +74,14 @@ body {
 .active {
     background: #307c31;
 }
+
 #list {
     display: flex;
     flex-wrap: wrap;
 }
+
 .srv {
     background-color: #0d47a1;
-
     border-radius: 8px;
     box-sizing: border-box;
     border: 3px solid #23272a;
@@ -161,6 +162,7 @@ body {
         width: 25%;
     }
 }
+
 @media screen and (max-width: 996px) {
     .srv {
         width: 100%;
@@ -331,12 +333,15 @@ body {
 .blu:hover {
     background: #175985;
 }
+
 .githubowy {
     background: #24292e;
 }
+
 .githubowy:hover {
     background: #1d2125;
 }
+
 #popp {
     position: absolute;
     z-index: 1;
@@ -437,13 +442,27 @@ body {
     margin: 10px;
     font-size: 200%;
 }
+
 #ty button {
     display: inline-block;
     margin: auto;
 }
+
 .btn-ct {
-    margin: auto;
-    display: block;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
     width: 230px;
 }
 
+.btn-ct .btn {
+    width: 100%;
+    margin: 12px;
+    padding: 15px;
+}
+
+.kacik {
+    margin: auto;
+    display: block;
+    width: 350px;
+}
