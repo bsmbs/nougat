@@ -399,7 +399,7 @@ function wiecej(gg) {
                                 document.getElementById("welcome-usun").style.display = 'none';
                             }
                             document.getElementById("welcome-zmien").onclick = function() {
-                                popup("Wiadomośc powitalna", "Wpisz nową wiadomośc powitalną", true)
+                                popup("Wiadomość powitalna", "Wpisz nową wiadomość powitalną", true)
                                 .then(wiadomosc => {
                                     fetch('/api/discord/postguild', {
                                         credentials: 'include',
