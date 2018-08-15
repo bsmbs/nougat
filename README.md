@@ -4,7 +4,12 @@
 
 Nougat to bot na Discorda. Posiada ponad 35 komend z 5 różnych kategorii!! 
 
-Funkcje przydatne administratorom serwerów (discord) takie jak: autorole, czyszczenie czatu, zakazane słowa i ARESZT (jail)
+* Funkcje przydatne administratorom serwerów (discord) takie jak: autorole, czyszczenie czatu, zakazane słowa i ARESZT (jail)
+* Ekonomia
+* Punkty za aktywność
+* Dashboard
+* Otwarty
+* Częste aktualizacje
 
 ## [Invite bota](https://discordapp.com/api/oauth2/authorize?client_id=429587398511427584&permissions=469822598&scope=bot)
 * [Dashboard (beta)](https://nougat.papryka.pro)
@@ -28,8 +33,15 @@ Wymagania:
 - [ ] w url wpisz adres dashboarda, lokalnie localhost:8282 (tylko dla testów lub jeżeli nie chcesz, wiem że nie chcesz)
 - [ ] Kiedy wszystko zostanie poprawnie uzupełnione, można wpisać `npm start` aby uruchomić bota.
 
-## TODO
-- [ ] język angielski
-- [ ] śmieszne mem obrazki
-- [ ] zaawansowane levele
-- [ ] Zarządzanie członkami (banowanie, wyrzucanie) // czemu po prostu nie robić tego przez discorda?
+## TODO - Cele do Nougata 4
+### Dashboard
+* Upiększenie strony logowania
+* Wyglądająca wersja mobilna
+* Topka wszystkich użytkowników
+* Topka serwera bez konieczności logowania
+* Może coś jeszcze, jestem otwarty na propozycje
+### Bot
+* Poziomy
+* Role za poziomy
+* clickrole - taki selfrole od tatsumaki tylko że LEPSZY bo role otrzymujesz za kliknięcie w reakcje
+* Nowe metody zarabiania i wydawania bitcoinów
