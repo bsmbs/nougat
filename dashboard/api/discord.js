@@ -65,7 +65,7 @@ router.get('/check', (req, res) => {
     if(!util.isUndefined(req.cookies)) {
         if(util.isUndefined(req.cookies.token)) {
             res.status(401)
-            res.send({ status: "ERROR", message: "not logged in" });
+            return res.send({ status: "ERROR", message: "not logged in" });
         }
         rp("https://discordapp.com/api/users/@me", {
             headers: {
@@ -83,8 +83,8 @@ router.get('/check', (req, res) => {
                 users: req.djs.users.size
             });
         }).catch(() => {
-            //console.log("resp not ok");
             res.status(401)
+            return res.send({ status: "ERROR", message: "not logged in" });
 
         })
     } else {
