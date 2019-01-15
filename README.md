@@ -2,6 +2,17 @@
 
 # Nougat ![GitHub last commit](https://img.shields.io/github/last-commit/pizza61/nougat.svg?style=for-the-badge) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/pizza61/nougat.svg?style=for-the-badge) ![GitHub Release](https://img.shields.io/github/release/pizza61/nougat.svg?style=for-the-badge)
 
+Po prawie 5-miesięcznej przerwie postanowiłem wrócić do Nougata, dlatego TODO umieszczam poniżej:
+## TODO - Cele do Nougata **5**
+### Dashboard
+* Zupełnie nowy dashboard, ładniejszy, funkcjonalniejszy itd
+### Bot
+* Porządek w kodzie, usunięcie zbędnych funkcji
+* Poziomy
+* Role za poziomy
+* clickrole - taki selfrole od tatsumaki tylko że LEPSZY bo role otrzymujesz za kliknięcie w reakcje
+* Nowe metody zarabiania i wydawania bitcoinów
+
 Nougat to bot na Discorda. Posiada ponad 35 komend z 5 różnych kategorii!! 
 
 * Funkcje przydatne administratorom serwerów (discord) takie jak: autorole, czyszczenie czatu, zakazane słowa i ARESZT (jail)
@@ -32,16 +43,3 @@ Wymagania:
 - [ ] Ten sam adres skopiuj do pola callback w settings.json
 - [ ] w url wpisz adres dashboarda, lokalnie localhost:8282 (tylko dla testów lub jeżeli nie chcesz, wiem że nie chcesz)
 - [ ] Kiedy wszystko zostanie poprawnie uzupełnione, można wpisać `npm start` aby uruchomić bota.
-
-## TODO - Cele do Nougata 4
-### Dashboard
-* Upiększenie strony logowania
-* Wyglądająca wersja mobilna
-* Topka wszystkich użytkowników
-* Topka serwera bez konieczności logowania
-* Może coś jeszcze, jestem otwarty na propozycje
-### Bot
-* Poziomy
-* Role za poziomy
-* clickrole - taki selfrole od tatsumaki tylko że LEPSZY bo role otrzymujesz za kliknięcie w reakcje
-* Nowe metody zarabiania i wydawania bitcoinów
