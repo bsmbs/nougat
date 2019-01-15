@@ -3,8 +3,8 @@ import { Nougat } from '../../main/main';
 let config = require('../../../../settings.json')
 
 export default function top(message: Message, args) {
-    message.channel.send("Sprawdź na: "+config.dashboard.url)
-    /*switch(args[0]) {
+    //message.channel.send("Sprawdź na: "+config.dashboard.url)
+    switch(args[0]) {
         case "hajs":
         Nougat.Uzytnik.find({}, (err, topa) => {
             if(!topa || err) return;
@@ -13,6 +13,7 @@ export default function top(message: Message, args) {
             .setAuthor('Nougat', 'https://cdn.discordapp.com/avatars/429587398511427584/a8d77ae510e68cc595c1ccda04a755fa.jpg?size=1024')
             .setColor((Math.random() * 0xFFFFFF << 0).toString(16))
             .setTitle('Top 10 najbogatszych ogólnie')
+            .setFooter("Zobacz w panelu: "+config.dashboard.url)
             
             topa.forEach((item, index) => {
                 if(index < 10) {
@@ -40,7 +41,7 @@ export default function top(message: Message, args) {
             .setAuthor('Nougat', 'https://cdn.discordapp.com/avatars/429587398511427584/a8d77ae510e68cc595c1ccda04a755fa.jpg?size=1024')
             .setColor((Math.random() * 0xFFFFFF << 0).toString(16))
             .setTitle('Top 10 najaktywniejszych na tym serwerze')
-            .setFooter('Aby zobaczyć najbogatszych ogólnie na wszystkich serwerach, wpisz top hajs')
+            .setFooter('Zobacz w panelu: '+config.dashboard.url)
             arrtop.forEach((aktywny, index) => {
                 if(index < 10) {
                     biednyEmbed.addField(aktywny.nick, aktywny.punkty, true);
@@ -50,6 +51,6 @@ export default function top(message: Message, args) {
             message.channel.send({embed:biednyEmbed})
         })
         break;
-    }*/
+    }
     
 }

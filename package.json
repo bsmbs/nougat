@@ -1,8 +1,8 @@
 {
   "name": "nougat",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "description": "Nougat - wielofunkcyjny bot na Discorda",
-  "main": "index.js",
+  "main": "dist/main.js",
   "scripts": {
     "build": "gulp",
     "start": "node dist/main.js",

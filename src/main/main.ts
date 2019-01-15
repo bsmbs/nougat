@@ -8,8 +8,7 @@ import { punktys } from '../modules/punktys';
 import { ready } from './ready';
 import { check } from './check';
 import { zakazane } from '../modules/zakazane';
-import { onMemberJoin, onBotJoin } from '../modules/onJoin';
-import { agents } from '../modules/agents';
+import { onMemberJoin } from '../modules/onJoin';
 const dashboard = require('../../../dashboard/main')
 
 export class Nougat {
@@ -115,7 +114,6 @@ export class Nougat {
         }
         this.client.on('ready', () => ready(this.client));
         this.client.on('guildMemberAdd', member => onMemberJoin(member));
-        this.client.on('guildCreate', guild => onBotJoin(this.client, guild));
         this.client.on("message", message => {
             if(message.author.bot) {
                 //agents(message);

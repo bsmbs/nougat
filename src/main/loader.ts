@@ -6,11 +6,8 @@ export { default as sprzedaj } from '../modules/sprzedaj';
 export { default as autorole } from '../commands/admin/autorole';
 export { default as ban } from '../commands/admin/ban';
 export { default as czysc } from '../commands/admin/czysc';
-export { default as jail } from '../commands/admin/jail';
 export { default as nazwa } from '../commands/admin/nazwa';
 export { default as warn } from '../commands/admin/warn';
-export { default as welcome } from '../commands/admin/welcome';
-export { default as zakazane } from '../commands/admin/zakazane';
 // eco
 export { default as biedronka} from '../commands/eco/biedronka';
 export { default as hajs } from '../commands/eco/hajs';
@@ -26,7 +23,6 @@ export { default as git } from '../commands/info/git';
 export { default as help } from '../commands/info/help';
 export { default as staty } from '../commands/info/staty';
 export { default as userinfo } from '../commands/info/userinfo';
-export { default as yt } from '../commands/info/yt';
 
 // inne
 export { default as pilka } from '../commands/other/8pilka';
