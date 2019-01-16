@@ -1,4 +1,5 @@
 import { RichEmbed } from 'discord.js';
+import { errorEmbed } from '../../modules/errorEmbed';
 let config = require('../../../../settings.json')
 
 export default function nazwa(args, message, client) {
@@ -13,24 +14,16 @@ export default function nazwa(args, message, client) {
             message.channel.send({
                 embed: successEmbed
             });
-            
         } else {
-            const errEmbed = new RichEmbed()
-                .setAuthor('Nougat', 'https://cdn.discordapp.com/avatars/429587398511427584/a8d77ae510e68cc595c1ccda04a755fa.jpg?size=1024')
-                .setColor((Math.random() * 0xFFFFFF << 0).toString(16))
-                .setTitle('Nie mam permisji do zmiany sobie nicku!');
+            // BOT NIE MA UPRAWNIEŃ
             message.channel.send({
-                embed: errEmbed
+                embed: errorEmbed("Bot nie ma uprawnień")
             });
         }
     } else {
-        const lamEmbed = new RichEmbed()
-            .setAuthor('Nougat', 'https://cdn.discordapp.com/avatars/429587398511427584/a8d77ae510e68cc595c1ccda04a755fa.jpg?size=1024')
-            .setColor((Math.random() * 0xFFFFFF << 0).toString(16))
-            .setTitle('Drogi użytkownku, potrzebujesz uprawnienia do zmiany innym nicków aby zmienić mi nick!')
-            .setDescription('Jest to jedynie zabezpieczenie');
+        // UŻYTKOWNIK NIE MA UPRAWNIEŃ
         message.channel.send({
-            embed: lamEmbed
+            embed: errorEmbed("Nie masz uprawnień")
         });
     }
 }

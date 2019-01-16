@@ -22,7 +22,8 @@ export function punktys(message: Message) {
                 uzyt.serwery.push({
                     id: message.guild.id,
                     punkty: 0,
-                    zajety: 0
+                    zajety: 0,
+                    warny: 0,
                 })
                 uzyt.save();
             }

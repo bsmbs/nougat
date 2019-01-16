@@ -1,4 +1,5 @@
 import { RichEmbed } from 'discord.js';
+import { errorEmbed } from '../../modules/errorEmbed';
 
 export default function czysc(args, message, client) {
     let count = isNaN(parseInt(args[0])) ? 0 : parseInt(args[0])
@@ -21,12 +22,7 @@ export default function czysc(args, message, client) {
                 message.channel.bulkDelete(msgs));
         }
     } else {
-        const errEmbed = new RichEmbed()
-        .setAuthor('Nougat', 'https://cdn.discordapp.com/avatars/429587398511427584/a8d77ae510e68cc595c1ccda04a755fa.jpg?size=1024')
-        .setColor(0xC62828)
-        .setTitle('Ktoś tu nie ma odpowiednich uprawnień.')
-        .setDescription("Sprawdź to komendą `check` dla uprawnień bota i `checkme` dla twoich uprawnień.\nPotrzebne: Zarządzanie wiadomościami")
-        message.channel.send({embed: errEmbed});
+        message.channel.send({embed: errorEmbed("Nie mam uprawnień albo ty nie masz")});
     }
 
 }

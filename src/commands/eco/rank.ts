@@ -3,8 +3,7 @@ import { Nougat } from '../../main/main';
 let config = require('../../../../settings.json')
 
 export default function rank(args, message: Message) {
-    message.channel.send("Sprawdź na: "+config.dashboard.url)
-    /*Nougat.Uzytnik.find({}, (err, topa) => {
+    Nougat.Uzytnik.find({}, (err, topa) => {
         if(err || !topa) return;
         topa.sort((a, b) => {return b.hajs-a.hajs});
         const biednyEmbed = new RichEmbed()
@@ -26,5 +25,5 @@ export default function rank(args, message: Message) {
         })
 
         message.channel.send({embed: biednyEmbed})
-    })*/
+    })
 }

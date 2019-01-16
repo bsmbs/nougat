@@ -11,7 +11,13 @@ export default function userinfo(args, message: Message) {
         var uzytkownikMem: GuildMember = message.mentions.members.first();
     }
     let czas = new Date(uzytkownik.createdTimestamp);
+    let czasMi = "0" + czas.getMinutes();
+    let czasMo = "0" + czas.getMonth()+1;
+
     let czasDol = new Date(uzytkownikMem.joinedTimestamp);
+    let czasDolMi = "0" + czasDol.getMinutes();
+    let czasDolMo = "0" + (czasDol.getMonth()+1);
+
     let status = 'Nieznany';
     switch(uzytkownik.presence.status) {
         case 'online':
@@ -28,14 +34,14 @@ export default function userinfo(args, message: Message) {
             break;
     }
     const boxdel = new RichEmbed()
-        .setAuthor('Nougat - user info', 'https://cdn.discordapp.com/avatars/429587398511427584/a8d77ae510e68cc595c1ccda04a755fa.jpg?size=1024')
-        .setColor((Math.random() * 0xFFFFFF << 0).toString(16))
+        .setAuthor('Nougat', 'https://cdn.discordapp.com/avatars/429587398511427584/a8d77ae510e68cc595c1ccda04a755fa.jpg?size=1024')
+        .setColor(0x128070)
         .setThumbnail(uzytkownik.avatarURL)
         .setTitle(uzytkownik.username)
-        .addField('Zarejestrowano', `${czas.getDate()}.${czas.getMonth()+1}.${czas.getFullYear()} ${czas.getHours()}:${czas.getMinutes()}`, true)
+        .addField('Zarejestrowano', `${czas.getDate()}.${czasMo.substr(-2)}.${czas.getFullYear()} ${czas.getHours()}:${czasMi.substr(-2)}`, true)
         .addField('Tag', uzytkownik.discriminator, true)
         .addField('Status', status, true)
-        .addField('Data dołączenia na serwer', `${czasDol.getDate()}.${czasDol.getMonth()+1}.${czasDol.getFullYear()} ${czasDol.getHours()}:${czasDol.getMinutes()}`,true)
+        .addField('Data dołączenia na serwer', `${czasDol.getDate()}.${czasDolMo.substr(-2)}.${czasDol.getFullYear()} ${czasDol.getHours()}:${czasDolMi.substr(-2)}`,true)
         .addField('ID', uzytkownik.id, true)
         .addField('Role', uzytkownikMem.roles.array(), true)
         .addField('Link do avataru:', uzytkownik.avatarURL, false)

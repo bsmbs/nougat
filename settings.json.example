@@ -2,13 +2,7 @@
     "_kom0": "skopiuj zawartość tego pliku do settings.json (w tym katalogu musisz utworzyć) wypełniając dla siebie",
         "id": "id uzytkownika, ktory ma miec dostep do funkcji administracyjnych bota",
         "token": "token bota",
-        "ytapi": "klucz do api youtuba, więcej informacji google",
-        "prefix": "prefix bota, domyślnie: *",
         "mongo": "adres bazy mongodb z nazwa bazy danych, zalecane: localhost/nougat",
-        "host": "nick osoby hostującej, możliwe że twój",
-        "mods": ["tablica id moderatorow (ty tez masz dostep do funkcji moderatora)", "1234"],
-        "invite": "link invite bota",
-        "support": "link support serwer",
         "dashboard": {
                 "id": "Client ID bota",
                 "secret": "Client Secret bota",

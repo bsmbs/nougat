@@ -4,7 +4,7 @@ import * as n from './loader';
 let config = require('../../../settings.json')
 
 export function handluj(message: Message, pozwij, sell, client) {
-    const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
+    const args = message.content.slice("*".length).trim().split(/ +/g);
     const command = args.shift().toLowerCase(); // wycinanie komendy i argumentow
 
     switch(command) {
@@ -12,10 +12,12 @@ export function handluj(message: Message, pozwij, sell, client) {
         case "autorole":
             n.autorole(args, message, client);
             break;
-        case "ban":
-            //n.ban(args, message, client);
+        case "cytaty":
+            n.cytaty(args, message);
             break;
         case "czysc":
+        case "purge":
+        case "clear":
             n.czysc(args, message, client);
             break;
         case "nazwa":
@@ -28,20 +30,11 @@ export function handluj(message: Message, pozwij, sell, client) {
             n.warn(args, message);
             break;
         // eco
-        case "biedronka":
-            n.biedronka(args, message);
-            break;
         case "hajs":
             n.hajs(args, message);
             break;
-        case "kup":
-            n.kup(args, message);
-            break;
         case "rank":
             n.rank(args, message);
-            break;
-        case "sprzedaj":
-            n.sprzedajc(message, sell.mode, sell.modev);
             break;
         case "top":
             n.top(message, args);

@@ -9,6 +9,7 @@ import { ready } from './ready';
 import { check } from './check';
 import { zakazane } from '../modules/zakazane';
 import { onMemberJoin } from '../modules/onJoin';
+import { reaguj } from './reaguj';
 const dashboard = require('../../../dashboard/main')
 
 export class Nougat {
@@ -58,7 +59,8 @@ export class Nougat {
             serwery: [{
                 id: String,
                 punkty: Number,
-                zajety: Number
+                zajety: Number,
+                warny: Number,
             }]
             })
         this.produktSchema = new Mongo.Schema({
@@ -77,12 +79,8 @@ export class Nougat {
                 default: []
             },
             lang: String,
-            jail: [{
-                id: String,
-                roles: [String]
-            }],
-            jailRola: String,
-            autorola: String
+            autorola: String,
+            cytaty: String,
         })
 
         Nougat.Uzytnik = Mongo.model('Uzytnik', this.userSchema);
@@ -120,23 +118,18 @@ export class Nougat {
                 return;
             }
             this.dodajPunkty(message);
-            if(message.content.startsWith(this.config.prefix)) {
+            if(message.content.startsWith("*")) {
                 if (message.guild) {
                     serwerm(message.guild, 1);
-                    /*Nougat.Serwer.find({id: message.guild.id}, (err, dcs) => {
-                        if (err) return;
-                        if(dcs[0].lang == 'en') {
-                            handluj(message, pozwij, sprzedaj, this.client, en);
-                        } else {
-                            handluj(message, pozwij, sprzedaj, this.client, pl);
-                        }
-                    })*/
                 }
                 handluj(message, pozwij, sprzedaj, this.client);
             } else {
                 check(message, pozwij, sprzedaj);
-                if (message.guild) zakazane(message);
             }
+        })
+
+        this.client.on("messageReactionAdd", (listener, user) => {
+            reaguj(listener, user, this.client);
         })
     }
 

@@ -1,20 +1,16 @@
 // modules
 export { default as sad } from '../modules/sadownictwo';
-export { default as sprzedaj } from '../modules/sprzedaj';
 
 // admin
 export { default as autorole } from '../commands/admin/autorole';
-export { default as ban } from '../commands/admin/ban';
+export { default as cytaty } from '../commands/admin/cytaty';
 export { default as czysc } from '../commands/admin/czysc';
 export { default as nazwa } from '../commands/admin/nazwa';
 export { default as warn } from '../commands/admin/warn';
 // eco
-export { default as biedronka} from '../commands/eco/biedronka';
 export { default as hajs } from '../commands/eco/hajs';
-export { default as kup } from '../commands/eco/kup';
 export { default as rank } from '../commands/eco/rank';
 export { default as top } from '../commands/eco/top';
-export { default as sprzedajc } from '../commands/eco/sprzedaj';
 export { default as zaplac } from '../commands/eco/zaplac';
 // info
 export { default as check } from '../commands/info/check';
